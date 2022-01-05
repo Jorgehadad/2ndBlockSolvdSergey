@@ -10,17 +10,17 @@ from staff p right join investigator i on p.DNI=i.DNI;
 
 #show species that aren't animals
 select *
-from species left join animals on species.scientific_name=animals.scientific_name
-where species.scientific_name not in (select species.scientific_name
-									from species right join animals 
-											on species.scientific_name=animals.scientific_name);
+from specie left join animal on specie.scientificname=animal.scientificname
+where specie.scientificname not in (select specie.scientificname
+									from specie right join animal
+											on specie.scientificname=animal.scientificname);
 
 
 #show just the species that are animals
-select species.scientific_name
-from species right join animals	on species.scientific_name=animals.scientific_name;
+select specie.scientificname
+from specie right join animal on specie.scientificname=animal.scientificname;
 
 
 #show just the species that are vegetables
-select species.scientific_name
-from species right join vegetables	on species.scientific_name=vegetables.scientific_name;
+select specie.scientificname
+from specie right join vegetable	on specie.scientificname=vegetable.scientificname;

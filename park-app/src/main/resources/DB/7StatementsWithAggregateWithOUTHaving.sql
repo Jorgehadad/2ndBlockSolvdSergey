@@ -3,12 +3,12 @@ select count(*)
 from staff;
 
 #show maximun staff salary
-select max(sueldo)
-from personal;
+select max(salary)
+from staff;
 
 #show average staff salary
-select avg(sueldo)
-from personal;
+select avg(salary)
+from staff;
 
 #show minimum staff salary
 select min(salary)
@@ -16,12 +16,12 @@ from staff;
 
 
 select count(*) as NumberofExcursions
-from excursions
-where excursions.date > "2020-10-10";
+from excursion
+where excursion.date > "2020-10-10";
 
 #Count how many parks are without consider the park "With Summer"
 SELECT count(*)
-FROM `solvd`.`parks`
+FROM `solvd`.`park`
 where NameP != "With Summer" ;
 
 
