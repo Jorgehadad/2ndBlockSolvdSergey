@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<parks>
+    <park id="1">
+        <nameP>With Summer</nameP>
+        <extension>100.0</extension>
+    </park>
+    <park id="2">
+        <nameP>With Spring</nameP>
+        <extension>200.0</extension>
+    </park>
+    <park id="3">
+        <nameP>Without Summer</nameP>
+        <extension>300.0</extension>
+    </park>
+</parks>

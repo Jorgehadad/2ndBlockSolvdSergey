@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Ministery>
+    <Parks>
+        <Park>
+            <NameP>With Summer</NameP>
+            <Extension>100.0</Extension>
+        </Park>
+        <Park>
+            <NameP>Without Summer</NameP>
+            <Extension>200.0</Extension>
+        </Park>
+    </Parks>
+</Ministery>
