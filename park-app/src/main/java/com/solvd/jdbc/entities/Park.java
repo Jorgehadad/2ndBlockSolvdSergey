@@ -3,7 +3,9 @@ package com.solvd.jdbc.entities;
 import java.sql.Date;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonSetter;
 
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -22,6 +24,7 @@ public class Park {
     @JsonProperty("dateDeclaration")
     private Date dateDeclaration;
 
+    @JsonIgnore
     private List<Area> areas;
     
     public Park() {
@@ -31,11 +34,12 @@ public class Park {
         this.nameP = nameP;
         this.dateDeclaration = dateDeclaration;
     }
-
+ 
     public String getNameP() {
         return nameP;
     }
 
+    @JsonSetter("nameP")
     public void setNameP(String nameP) {
         this.nameP = nameP;
     }
@@ -44,6 +48,7 @@ public class Park {
         return dateDeclaration;
     }
 
+    @JsonSetter("dateDeclaration")
     public void setDateDeclaracion(Date dateDeclaracion) {
         this.dateDeclaration = dateDeclaracion;
     }

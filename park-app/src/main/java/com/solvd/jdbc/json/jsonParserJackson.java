@@ -51,6 +51,10 @@ public class jsonParserJackson {
         System.out.println(nameP);
         System.out.println(dateDeclaracion);
 
+        List<Park> listPark3 = mapper.readValue(new File("src/main/java/com/solvd/jdbc/json/parks.json"), new TypeReference<List<Park>>(){});
+        System.out.println(listPark3.size());
+        System.out.println(listPark3.get(0).getNameP());
+        System.out.println(listPark3.get(0).getDateDeclaracion());
         
 
 
