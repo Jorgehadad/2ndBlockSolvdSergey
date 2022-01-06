@@ -1,14 +1,14 @@
 package com.solvd.jdbc.objectsIgnore;
 
-public class Resides_area_esp {
+public class ResidesAreaEsp {
     private String NameA;
     private Integer individualsNumber;
     private String scientific_name;
 
-    public Resides_area_esp() {
+    public ResidesAreaEsp() {
     }
 
-    public Resides_area_esp(String NameA, Integer individualsNumber, String scientific_name) {
+    public ResidesAreaEsp(String NameA, Integer individualsNumber, String scientific_name) {
         this.NameA = NameA;
         this.individualsNumber = individualsNumber;
         this.scientific_name = scientific_name;

@@ -1,13 +1,13 @@
 package com.solvd.jdbc.objectsIgnore;
 
-public class Tiene_community_parks {
+public class HasCommunityParks {
     private String Name_CA;
     private String NameP;
 
-    public Tiene_community_parks() {
+    public HasCommunityParks() {
     }
 
-    public Tiene_community_parks(String Name_CA, String NameP) {
+    public HasCommunityParks(String Name_CA, String NameP) {
         this.Name_CA = Name_CA;
         this.NameP = NameP;
     }

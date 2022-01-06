@@ -1,14 +1,14 @@
 package com.solvd.jdbc.objectsIgnore;
 
-public class Makes_proy_inv_esp {
+public class MakesProyInvEsp {
     private String ProyectName;
     private String DNI;
     private Integer scientific_name;
 
-    public Makes_proy_inv_esp() {
+    public MakesProyInvEsp() {
     }
 
-    public Makes_proy_inv_esp(String proyectName, String DNI, Integer scientific_name) {
+    public MakesProyInvEsp(String proyectName, String DNI, Integer scientific_name) {
         ProyectName = proyectName;
         this.DNI = DNI;
         this.scientific_name = scientific_name;

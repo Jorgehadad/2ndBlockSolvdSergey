@@ -6,13 +6,16 @@ import java.util.List;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 
 @XmlRootElement(name = "area")
 @XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(propOrder = {"nameP", "dateDeclaration"})
 public class Park {
-
+    
     @JsonProperty("nameP")
     private String nameP;
 
@@ -21,8 +24,6 @@ public class Park {
 
     private List<Area> areas;
     
-
-
     public Park() {
     }
 

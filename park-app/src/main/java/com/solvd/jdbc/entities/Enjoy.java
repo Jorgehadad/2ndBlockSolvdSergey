@@ -1,8 +1,20 @@
 package com.solvd.jdbc.entities;
 
+import com.fasterxml.jackson.annotation.*;
+
+import jakarta.xml.bind.annotation.*;
+
+@XmlRootElement(name = "area")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Enjoy {
+    @XmlElement(name = "DNI")
+    @JsonProperty("DNI")
     private Integer DNI;
-    private Integer Cod_Excursion;
+
+    @XmlElement(name = "codExcursion")
+    @JsonProperty("codExcursion")
+    private Integer codExcursion;
+
 
     public Integer getDNI() {
         return DNI;
@@ -12,28 +24,20 @@ public class Enjoy {
         this.DNI = DNI;
     }
 
-    public Integer getCod_Excursion() {
-        return Cod_Excursion;
+    public Integer getCodExcursion() {
+        return codExcursion;
     }
 
-    public void setCod_Excursion(Integer cod_Excursion) {
-        Cod_Excursion = cod_Excursion;
+    public void setCodExcursion(Integer codExcursion) {
+        this.codExcursion = codExcursion;
     }
 
     @Override
     public String toString() {
         return "Enjoy{" +
                 "DNI=" + DNI +
-                ", Cod_Excursion=" + Cod_Excursion +
+                ", codExcursion=" + codExcursion +
                 '}';
-    }
-
-    public Enjoy() {
-    }
-
-    public Enjoy(Integer DNI, Integer cod_Excursion) {
-        this.DNI = DNI;
-        this.Cod_Excursion = cod_Excursion;
     }
 
 }

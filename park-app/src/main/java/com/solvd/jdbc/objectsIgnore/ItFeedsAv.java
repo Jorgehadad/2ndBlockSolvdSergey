@@ -1,13 +1,13 @@
 package com.solvd.jdbc.objectsIgnore;
 
-public class eat_to_feed_aa {
-    private String scientific_name_come;
+public class ItFeedsAv {
+    private String scientific_name_come ;
     private String scientific_name_iseaten;
 
-    public eat_to_feed_aa() {
+    public ItFeedsAv() {
     }
 
-    public eat_to_feed_aa(String scientific_name_come, String scientific_name_iseaten) {
+    public ItFeedsAv(String scientific_name_come, String scientific_name_iseaten) {
         this.scientific_name_come = scientific_name_come;
         this.scientific_name_iseaten = scientific_name_iseaten;
     }
@@ -30,10 +30,10 @@ public class eat_to_feed_aa {
 
     @Override
     public String toString() {
-        return "eat_to_feed_aa{" +
+        return "It_feeds_av{" +
                 "scientific_name_come='" + scientific_name_come + '\'' +
                 ", scientific_name_iseaten='" + scientific_name_iseaten + '\'' +
                 '}';
     }
-
+    
 }

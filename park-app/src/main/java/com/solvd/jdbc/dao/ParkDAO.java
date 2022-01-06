@@ -11,8 +11,6 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-
-import com.solvd.jdbc.connections.DBConnection;
 import com.solvd.jdbc.connections.PoolConnection;
 import com.solvd.jdbc.entities.Area;
 import com.solvd.jdbc.entities.Park;
