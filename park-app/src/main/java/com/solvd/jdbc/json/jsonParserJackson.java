@@ -7,6 +7,7 @@ import java.util.Calendar;
 import java.util.List;
 
 import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.json.JsonMapper;
 import com.solvd.jdbc.entities.Park;
@@ -42,6 +43,17 @@ public class jsonParserJackson {
         String jsonParkArray2 = JsonMapper.builder().build().writeValueAsString(listPark);
         List<Park> listPark2 = mapper.readValue(jsonParkArray2, new TypeReference<List<Park>>(){});
         System.out.println(listPark2);
+
+        String json = "{\"nameP\":\"Park1\",\"dateDeclaracion\":\"2019-01-01\"}";
+        JsonNode jsonNode = mapper.readTree(json);
+        String nameP = jsonNode.get("nameP").asText();
+        String dateDeclaracion = jsonNode.get("dateDeclaracion").asText();
+        System.out.println(nameP);
+        System.out.println(dateDeclaracion);
+
+        
+
+
 
     }
 
