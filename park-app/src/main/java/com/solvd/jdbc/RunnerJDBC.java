@@ -2,6 +2,7 @@ package com.solvd.jdbc;
 
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.List;
 
 import com.solvd.jdbc.connections.PoolConnection;
 import com.solvd.jdbc.dao.HousedDAO;
@@ -34,13 +35,43 @@ public class RunnerJDBC {
         
         ParkService parkService = new ParkService(); 
         //parkService.save(park);
-        parkService.getAll();
+         // **********************print all parks********************** //
+        List<Park> parks = parkService.getAll();
+        for (Park park1 : parks) {
+            System.out.println(park1);
+        }
+
+        // **********************print park by name********************** //
+        Park park2 = parkService.getByName("With Summer");
+        System.out.println(park2);
+
+        // **********************print park by date********************** //
+        Park park3 = parkService.getByDate(java.sql.Date.valueOf("2021-01-01"));
+        System.out.println(park3);
+
+        // **********************print park by name and date********************** //
+        List<Park> parks2 = parkService.getByNameAndDate("With Summer", java.sql.Date.valueOf("2021-01-01"));
+        for (Park park4 : parks2) {
+            System.out.println(park4);
+        }
+
+        // **********************update park********************** //
+        Park park5 = parkService.getByName("With Summer");
+        park5.setNameP("With Summer2");
+        parkService.update(park5);
+        System.out.println(park5);
+
+        // **********************delete park********************** //
+        Park park6 = parkService.getByName("With Summer2");
+        parkService.delete(park6);
+        System.out.println(park6);
+
         //parkService.getByNameA(area.getNameA());
         //parkService.update(area);
         //parkService.delete(area);
         
  //------------------------------------------------------------------------//
-        /*
+        
         Housed housed = new Housed();
         housed.setNumAccomodation(1);
         housed.setDniVisitor(1);
@@ -50,8 +81,11 @@ public class RunnerJDBC {
 
         HousedDAO housedDAO = new HousedDAO();
         //housedDAO.save(housed); //foreing key problems safe update
-        housedDAO.getAllLimit10();
-        */
+
+        // ********************** printing 10 housed ********************** //
+
+        List houseList = housedDAO.getAllLimit10();
+        
  //------------------------------------------------------------------------//
         /*
         Visitor visitor = new Visitor();
@@ -65,7 +99,7 @@ public class RunnerJDBC {
         visitorDAO.getAll();
         */
 //------------------------------------------------------------------------//
-        
+       
 
 
     }
