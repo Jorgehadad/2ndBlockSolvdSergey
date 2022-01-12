@@ -10,6 +10,7 @@ import com.solvd.jdbc.dao.VisitorDAO;
 import com.solvd.jdbc.entities.Housed;
 import com.solvd.jdbc.entities.Park;
 import com.solvd.jdbc.entities.Visitor;
+import com.solvd.jdbc.service.ParkService;
 
 public class RunnerJDBC {
 
@@ -26,18 +27,18 @@ public class RunnerJDBC {
         }
 
 //------------------------------------------------------------------------//
-        /*
+        
         Park park = new Park();
         park.setNameP("With Summer2");
         park.setDateDeclaracion(java.sql.Date.valueOf("2021-01-01"));
         
-        ParkDAO ParkDAO = new ParkDAO(); 
-        //ParkDAO.save(park);
-        ParkDAO.getAll();
-        //ParksService.getByNameA(area.getNameA());
-        //ParksService.update(area);
-        //ParksService.delete(area);
-        */
+        ParkService parkService = new ParkService(); 
+        //parkService.save(park);
+        parkService.getAll();
+        //parkService.getByNameA(area.getNameA());
+        //parkService.update(area);
+        //parkService.delete(area);
+        
  //------------------------------------------------------------------------//
         /*
         Housed housed = new Housed();
