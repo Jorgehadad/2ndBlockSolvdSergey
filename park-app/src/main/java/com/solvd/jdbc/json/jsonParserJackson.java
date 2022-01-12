@@ -36,7 +36,7 @@ public class jsonParserJackson {
         System.out.println(newpark);
 
         //MAP JSON WITH JACKSON 
-        String jsonParkArray = "[{\"nameP\":\"Park1\",\"dateDeclaracion\":\"2019-01-01\"},{\"nameP\":\"Park2\",\"dateDeclaracion\":\"2019-01-02\"}]";
+        //String jsonParkArray = "[{\"nameP\":\"Park1\",\"dateDeclaracion\":\"2019-01-01\"},{\"nameP\":\"Park2\",\"dateDeclaracion\":\"2019-01-02\"}]";
         List<Park> listPark = mapper.readValue(new File("src/main/java/com/solvd/jdbc/json/parks.json"), new TypeReference<List<Park>>(){});
         System.out.println(listPark);
 

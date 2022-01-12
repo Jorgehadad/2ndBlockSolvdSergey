@@ -11,7 +11,7 @@ import jakarta.xml.bind.annotation.XmlType;
 
 @XmlRootElement(name = "area")
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(propOrder = {"DNI","codExcursion"})
+@XmlType(propOrder = {"nameA","nameP","extension"})
 public class Area  {
 
     @JsonProperty("nameA")

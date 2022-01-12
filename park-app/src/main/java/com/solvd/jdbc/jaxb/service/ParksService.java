@@ -1,4 +1,4 @@
-package com.solvd.jdbc.service;
+package com.solvd.jdbc.jaxb.service;
 
 import java.io.File;
 import java.sql.SQLException;

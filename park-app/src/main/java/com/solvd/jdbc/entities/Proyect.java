@@ -1,4 +1,4 @@
-package com.solvd.jdbc.objectsIgnore;
+package com.solvd.jdbc.entities;
 
 import java.sql.Date;
 

@@ -3,7 +3,7 @@ package com.solvd.jdbc.jaxb;
 import java.sql.SQLException;
 
 import com.solvd.jdbc.entities.Area;
-import com.solvd.jdbc.service.AreaService;
+import com.solvd.jdbc.jaxb.service.AreaService;
 
 public class Main {
     public static void main(String[] args) throws SQLException {
@@ -16,8 +16,8 @@ public class Main {
         
 
 
-        AreaService areasDAO = new AreaService();
-        areasDAO.save(area);
+        AreaService areasService = new AreaService();
+        areasService.save(area);
         //areasDAO.getById(area.getNameA());
         //areasDAO.update(area);
         //areasDAO.delete(area);
