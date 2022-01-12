@@ -28,7 +28,7 @@ public class RunnerJDBC {
         }
 
 //------------------------------------------------------------------------//
-        
+        /*
         Park park = new Park();
         park.setNameP("With Summer2");
         park.setDateDeclaracion(java.sql.Date.valueOf("2021-01-01"));
@@ -55,7 +55,7 @@ public class RunnerJDBC {
             System.out.println(park4);
         }
 
-        // **********************update park********************** //
+        // **********************update new park********************** //
         Park park5 = parkService.getByName("With Summer");
         park5.setNameP("With Summer2");
         parkService.update(park5);
@@ -70,8 +70,11 @@ public class RunnerJDBC {
         //parkService.update(area);
         //parkService.delete(area);
         
+        */
  //------------------------------------------------------------------------//
-        
+        /*       
+        +++++++++++++++ NOT IMPLEMENTED SERVICES YET +++++++++++++++++
+
         Housed housed = new Housed();
         housed.setNumAccomodation(1);
         housed.setDniVisitor(1);
@@ -85,6 +88,8 @@ public class RunnerJDBC {
         // ********************** printing 10 housed ********************** //
 
         List houseList = housedDAO.getAllLimit10();
+
+        */
         
  //------------------------------------------------------------------------//
         /*
