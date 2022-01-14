@@ -8,8 +8,8 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.solvd.entities.Area;
 import com.solvd.jdbc.connections.PoolConnection;
-import com.solvd.jdbc.entities.Area;
 import com.solvd.jdbc.interfaces.IAreasDAO;
 
 public class AreaDAO extends AbstractJdbcDAO implements IAreasDAO {

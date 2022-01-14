@@ -3,9 +3,9 @@ package com.solvd.jdbc;
 import java.sql.Connection;
 import java.sql.SQLException;
 
+import com.solvd.entities.Area;
 import com.solvd.jdbc.connections.PoolConnection;
 import com.solvd.jdbc.dao.AreaDAO;
-import com.solvd.jdbc.entities.Area;
 
 
 public class MainJDBC {

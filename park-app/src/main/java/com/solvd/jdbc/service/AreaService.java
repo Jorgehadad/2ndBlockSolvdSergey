@@ -3,8 +3,8 @@ package com.solvd.jdbc.service;
 import java.sql.SQLException;
 import java.util.List;
 
+import com.solvd.entities.Area;
 import com.solvd.jdbc.dao.AreaDAO;
-import com.solvd.jdbc.entities.Area;
 
 public class AreaService {
     private static AreaDAO areaDAO;

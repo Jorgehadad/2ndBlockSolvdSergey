@@ -12,13 +12,12 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.solvd.entities.Area;
+import com.solvd.entities.Park;
 import com.solvd.jdbc.connections.PoolConnection;
-import com.solvd.jdbc.entities.Area;
 import com.solvd.jdbc.interfaces.IAreasDAO;
 
 import com.solvd.jdbc.dao.ParkDAO;
-import com.solvd.jdbc.entities.Area;
-import com.solvd.jdbc.entities.Park;
 
 public class ParkService {
     private static final String SQL_GET_ALL_AREAS_NAMEP = "SELECT * FROM area WHERE nameP = ?";

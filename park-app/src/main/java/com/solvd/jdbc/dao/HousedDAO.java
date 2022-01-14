@@ -10,8 +10,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
+import com.solvd.entities.Housed;
 import com.solvd.jdbc.connections.PoolConnection;
-import com.solvd.jdbc.entities.Housed;
 import com.solvd.jdbc.interfaces.IHousedDAO;
 
 public class HousedDAO extends AbstractJdbcDAO implements IHousedDAO {

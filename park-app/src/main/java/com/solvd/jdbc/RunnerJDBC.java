@@ -4,13 +4,13 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.List;
 
+import com.solvd.entities.Housed;
+import com.solvd.entities.Park;
+import com.solvd.entities.Visitor;
 import com.solvd.jdbc.connections.PoolConnection;
 import com.solvd.jdbc.dao.HousedDAO;
 import com.solvd.jdbc.dao.ParkDAO;
 import com.solvd.jdbc.dao.VisitorDAO;
-import com.solvd.jdbc.entities.Housed;
-import com.solvd.jdbc.entities.Park;
-import com.solvd.jdbc.entities.Visitor;
 import com.solvd.jdbc.service.ParkService;
 
 public class RunnerJDBC {

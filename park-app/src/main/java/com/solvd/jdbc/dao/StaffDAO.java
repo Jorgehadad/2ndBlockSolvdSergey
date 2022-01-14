@@ -3,7 +3,7 @@ package com.solvd.jdbc.dao;
 import java.sql.SQLException;
 
 import com.solvd.jdbc.interfaces.IStaffDAO;
-import com.solvd.jdbc.objectsIgnore.Staff;
+import com.solvd.objectsIgnore.Staff;
 
 public class StaffDAO extends AbstractJdbcDAO implements IStaffDAO {
 

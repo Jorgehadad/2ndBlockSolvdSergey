@@ -10,10 +10,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import com.solvd.jdbc.connections.PoolConnection;
 
-import com.solvd.jdbc.entities.Area;
-import com.solvd.jdbc.entities.Park;
+import com.solvd.entities.Area;
+import com.solvd.entities.Park;
+import com.solvd.jdbc.connections.PoolConnection;
 import com.solvd.jdbc.interfaces.IParksDAO;
 import com.solvd.jdbc.service.ParkService;
 
