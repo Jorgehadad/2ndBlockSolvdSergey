@@ -9,7 +9,7 @@ import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import jakarta.xml.bind.annotation.XmlType;
 
-@XmlRootElement(name = "area")
+@XmlRootElement(name = "areas")
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(propOrder = {"nameA","nameP","extension"})
 public class Area  {
@@ -27,7 +27,6 @@ public class Area  {
         return nameA;
     }
 
-    @XmlElement(name = "nameA")
     public void setnameA(String nameA) {
         this.nameA = nameA;
     }
@@ -36,7 +35,6 @@ public class Area  {
         return nameP;
     }
 
-    @XmlElement(name = "nameP")
     public void setnameP(String nameP) {
         this.nameP = nameP;
     }
@@ -45,7 +43,6 @@ public class Area  {
         return extension;
     }
 
-    @XmlElement(name = "extension")
     public void setExtension(Double extension) {
         this.extension = extension;
     }

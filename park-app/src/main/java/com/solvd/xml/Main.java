@@ -10,17 +10,17 @@ public class Main {
 
 
         Area area = new Area();
-        area.setnameA("Area16");
-        area.setnameA("With Summer");
-        area.setExtension(100.0);
+        area.setnameA("Area23");
+        area.setnameA("With Summer2");
+        area.setExtension(200.0);
         
 
 
         AreaService areasService = new AreaService();
         areasService.save(area);
-        //areasDAO.getById(area.getNameA());
-        //areasDAO.update(area);
-        //areasDAO.delete(area);
+        //areasService.getAll();
+        //areasService.update(area);
+        //areasService.delete(area);
 
     }    
 }

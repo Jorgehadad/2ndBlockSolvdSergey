@@ -29,8 +29,8 @@ public class DomParsePark {
 		if (nNode.getNodeType() == Node.ELEMENT_NODE) {
 		    Element eElement = (Element) nNode;
 		    System.out.println("Park id : " + eElement.getAttribute("id"));
-		    System.out.println("Park name: " + eElement.getElementsByTagName("NameP").item(0).getTextContent());
-		    System.out.println("Extension : " + eElement.getElementsByTagName("Extension").item(0).getTextContent());
+		    System.out.println("Park name: " + eElement.getElementsByTagName("nameP").item(0).getTextContent());
+		    System.out.println("Extension : " + eElement.getElementsByTagName("extension").item(0).getTextContent());
 		}
 	    }
 	} catch (Exception e) {

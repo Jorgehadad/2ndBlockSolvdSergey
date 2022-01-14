@@ -18,7 +18,6 @@ public class JaxbRunner {
                 (JaxbRunner.class.getClassLoader().
                         getResourceAsStream("XML/areas.xml"));
         System.out.println(areas);
-        
     }
 
 }
