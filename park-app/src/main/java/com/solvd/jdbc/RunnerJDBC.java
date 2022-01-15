@@ -11,7 +11,7 @@ import com.solvd.jdbc.connections.PoolConnection;
 import com.solvd.jdbc.dao.HousedDAO;
 import com.solvd.jdbc.dao.ParkDAO;
 import com.solvd.jdbc.dao.VisitorDAO;
-import com.solvd.jdbc.service.ParkService;
+import com.solvd.jdbc.service.ParkServiceJDBC;
 
 public class RunnerJDBC {
 

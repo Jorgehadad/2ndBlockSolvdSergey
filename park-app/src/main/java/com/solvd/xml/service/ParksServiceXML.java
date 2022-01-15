@@ -19,7 +19,7 @@ import jakarta.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement(name = "park")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class ParksService implements IParksDAO {
+public class ParksServiceXML implements IParksDAO {
 
     @Override
     public void save(Park entity) throws SQLException {

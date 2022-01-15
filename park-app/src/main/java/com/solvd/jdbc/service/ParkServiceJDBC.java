@@ -19,11 +19,11 @@ import com.solvd.jdbc.interfaces.IAreasDAO;
 
 import com.solvd.jdbc.dao.ParkDAO;
 
-public class ParkService {
+public class ParkServiceJDBC {
     private static final String SQL_GET_ALL_AREAS_NAMEP = "SELECT * FROM area WHERE nameP = ?";
     private static ParkDAO parkDAO;
 
-    public ParkService() {
+    public ParkServiceJDBC() {
         parkDAO = new ParkDAO();
     }
 

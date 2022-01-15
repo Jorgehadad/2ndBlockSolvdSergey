@@ -15,7 +15,7 @@ import com.solvd.entities.Area;
 import com.solvd.entities.Park;
 import com.solvd.jdbc.connections.PoolConnection;
 import com.solvd.jdbc.interfaces.IParksDAO;
-import com.solvd.jdbc.service.ParkService;
+import com.solvd.jdbc.service.ParkServiceJDBC;
 
 public class ParkDAO extends AbstractJdbcDAO implements IParksDAO {
         
@@ -109,7 +109,7 @@ public class ParkDAO extends AbstractJdbcDAO implements IParksDAO {
                 park.setNameP(rs.getString("nameP"));
                 park.setDateDeclaracion(rs.getDate("dateDeclaration"));
                 areas = new ArrayList<>();
-                ParkService parkService = new ParkService();
+                ParkServiceJDBC parkService = new ParkServiceJDBC();
                 areas = parkService.getAllAreasByNameP(park.getNameP());
                 park.setAreas(areas);
                 parks.add(park);

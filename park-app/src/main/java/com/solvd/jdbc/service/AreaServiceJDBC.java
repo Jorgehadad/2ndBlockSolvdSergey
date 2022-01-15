@@ -6,10 +6,10 @@ import java.util.List;
 import com.solvd.entities.Area;
 import com.solvd.jdbc.dao.AreaDAO;
 
-public class AreaService {
+public class AreaServiceJDBC {
     private static AreaDAO areaDAO;
 
-    public AreaService() {
+    public AreaServiceJDBC() {
         areaDAO = new AreaDAO();
     }
 

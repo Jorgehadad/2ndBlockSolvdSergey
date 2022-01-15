@@ -6,14 +6,14 @@ public class Staff {
     private Double salary;
     private Integer NumSegSoc;
     private String Address;
-    private String Phone_fijo;
-    private String Phone_mobile;
+    private Integer Phone_fijo;
+    private Integer Phone_mobile;
     private String NameP;
 
     public Staff() {
     }
 
-    public Staff(Integer DNI, String Name, Double salary, Integer NumSegSoc, String Address, String Phone_fijo, String Phone_mobile, String NameP) {
+    public Staff(Integer DNI, String Name, Double salary, Integer NumSegSoc, String Address, Integer Phone_fijo, Integer Phone_mobile, String NameP) {
         this.DNI = DNI;
         this.Name = Name;
         this.salary = salary;
@@ -64,19 +64,19 @@ public class Staff {
         this.Address = Address;
     }
 
-    public String getPhone_fijo() {
+    public Integer getPhone_fijo() {
         return Phone_fijo;
     }
 
-    public void setPhone_fijo(String Phone_fijo) {
+    public void setPhone_fijo(Integer Phone_fijo) {
         this.Phone_fijo = Phone_fijo;
     }
 
-    public String getPhone_mobile() {
+    public Integer getPhone_mobile() {
         return Phone_mobile;
     }
 
-    public void setPhone_mobile(String Phone_mobile) {
+    public void setPhone_mobile(Integer Phone_mobile) {
         this.Phone_mobile = Phone_mobile;
     }
 

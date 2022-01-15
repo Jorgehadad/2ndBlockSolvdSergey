@@ -1,5 +1,5 @@
 package com.solvd.xml.service;
 
-public class VisitorsService {
+public class ProyectsServiceXML {
     
 }

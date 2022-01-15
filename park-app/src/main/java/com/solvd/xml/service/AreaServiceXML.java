@@ -20,17 +20,17 @@ import jakarta.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement(name = "areas")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class AreaService implements IAreasDAO {
+public class AreaServiceXML implements IAreasDAO {
     private static File FILE = new File("src/main/resources/XML/areas.xml");
 
     @XmlElement(name = "area")
     private List<Area> areas = null;
 
-    public AreaService(List<Area> areas) {
+    public AreaServiceXML(List<Area> areas) {
         this.areas = areas;
     }
 
-    public AreaService() {
+    public AreaServiceXML() {
     }
 
     @Override
@@ -41,9 +41,9 @@ public class AreaService implements IAreasDAO {
     }
 
     //marshall
-    private void marshall(AreaService areasDAO) {
+    private void marshall(AreaServiceXML areasDAO) {
         try {
-            JAXBContext jaxbContext = JAXBContext.newInstance(AreaService.class);
+            JAXBContext jaxbContext = JAXBContext.newInstance(AreaServiceXML.class);
             Marshaller marshaller = jaxbContext.createMarshaller();
             marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
             marshaller.marshal(areasDAO, FILE);
@@ -55,9 +55,9 @@ public class AreaService implements IAreasDAO {
     //unmarshall
     private List<Area> unmarshall() {
         try {
-            JAXBContext jaxbContext = JAXBContext.newInstance(AreaService.class);
+            JAXBContext jaxbContext = JAXBContext.newInstance(AreaServiceXML.class);
             Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
-            AreaService areasDAO = (AreaService) unmarshaller.unmarshal(FILE);
+            AreaServiceXML areasDAO = (AreaServiceXML) unmarshaller.unmarshal(FILE);
             return areasDAO.getAreas();
         } catch (JAXBException e) {
             e.printStackTrace();

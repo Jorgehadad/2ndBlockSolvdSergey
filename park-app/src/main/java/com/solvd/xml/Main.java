@@ -3,7 +3,7 @@ package com.solvd.xml;
 import java.sql.SQLException;
 
 import com.solvd.entities.Area;
-import com.solvd.xml.service.AreaService;
+import com.solvd.xml.service.AreaServiceXML;
 
 public class Main {
     public static void main(String[] args) throws SQLException {
@@ -16,7 +16,7 @@ public class Main {
         
 
 
-        AreaService areasService = new AreaService();
+        AreaServiceXML areasService = new AreaServiceXML();
         areasService.save(area);
         //areasService.getAll();
         //areasService.update(area);
