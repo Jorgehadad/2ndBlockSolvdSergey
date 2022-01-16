@@ -17,10 +17,10 @@ import jakarta.xml.bind.annotation.XmlAccessType;
 @XmlType(propOrder = {"dni","name","Address","Profession"})
 public class Visitor {
     @JsonProperty("dni")
-    private Integer DNI;
+    private Integer dni;
 
     @JsonProperty("name")
-    private String Name;
+    private String name;
 
     @JsonProperty("Address")
     private String Address;
@@ -34,29 +34,29 @@ public class Visitor {
     public Visitor() {
     }
 
-    public Visitor(Integer DNI, String Name, String Address, String Profession) {
-        this.DNI = DNI;
-        this.Name = Name;
+    public Visitor(Integer dni, String name, String Address, String Profession) {
+        this.dni = dni;
+        this.name = name;
         this.Address = Address;
         this.Profession = Profession;
     }
 
     public Integer getDNI() {
-        return DNI;
+        return dni;
     }
 
     @JsonSetter("dni")
-    public void setDNI(Integer DNI) {
-        this.DNI = DNI;
+    public void setDNI(Integer dni) {
+        this.dni = dni;
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     @JsonSetter("name")
-    public void setName(String Name) {
-        this.Name = Name;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getAddress() {
@@ -85,13 +85,15 @@ public class Visitor {
     }
     
 
+    // to string with housedList
     @Override
     public String toString() {
         return "Visitor{" +
-                "DNI=" + DNI +
-                ", Name='" + Name + '\'' +
+                "dni=" + dni +
+                ", name='" + name + '\'' +
                 ", Address='" + Address + '\'' +
                 ", Profession='" + Profession + '\'' +
+                ", housedList=" + housedList +
                 '}';
     }
 }

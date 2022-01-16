@@ -2,8 +2,7 @@ package com.solvd.mybatis.connection;
 
 import javax.sql.DataSource;
 
-import com.solvd.mybatis.mapper.AreaMapperMyBatis;
-import com.solvd.mybatis.mapper.ParkMapperMyBatis;
+import com.solvd.mybatis.mapper.*;
 
 import org.apache.ibatis.datasource.pooled.PooledDataSource;
 import org.apache.ibatis.mapping.Environment;
@@ -23,6 +22,9 @@ public class ConnectionBuilder {
         Configuration configuration = new Configuration(environment);
         configuration.addMapper(ParkMapperMyBatis.class);
         configuration.addMapper(AreaMapperMyBatis.class);
+        configuration.addMapper(VisitorMapperMyBatis.class);
+        configuration.addMapper(StaffMapperMyBatis.class);
+        configuration.addMapper(HousedMapperMyBatis.class);
         //always add mappers to configuration
 
         SqlSessionFactoryBuilder builder = new SqlSessionFactoryBuilder();

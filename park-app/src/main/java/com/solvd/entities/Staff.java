@@ -1,43 +1,43 @@
 package com.solvd.entities;
 
 public class Staff {
-    private Integer DNI;
-    private String Name;
+    private Integer dni;
+    private String name;
     private Double salary;
-    private Integer NumSegSoc;
-    private String Address;
-    private Integer Phone_fijo;
-    private Integer Phone_mobile;
-    private String NameP;
+    private Integer numSegSoc;
+    private String address;
+    private Integer phone_fijo;
+    private Integer phone_mobile;
+    private String nameP;
 
     public Staff() {
     }
 
-    public Staff(Integer DNI, String Name, Double salary, Integer NumSegSoc, String Address, Integer Phone_fijo, Integer Phone_mobile, String NameP) {
-        this.DNI = DNI;
-        this.Name = Name;
+    public Staff(Integer dni, String name, Double salary, Integer numSegSoc, String address, Integer phone_fijo, Integer phone_mobile, String nameP) {
+        this.dni = dni;
+        this.name = name;
         this.salary = salary;
-        this.NumSegSoc = NumSegSoc;
-        this.Address = Address;
-        this.Phone_fijo = Phone_fijo;
-        this.Phone_mobile = Phone_mobile;
-        this.NameP = NameP;
+        this.numSegSoc = numSegSoc;
+        this.address = address;
+        this.phone_fijo = phone_fijo;
+        this.phone_mobile = phone_mobile;
+        this.nameP = nameP;
     }
 
-    public Integer getDNI() {
-        return DNI;
+    public Integer getDni() {
+        return dni;
     }
 
-    public void setDNI(Integer DNI) {
-        this.DNI = DNI;
+    public void setDni(Integer dni) {
+        this.dni = dni;
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
-    public void setName(String Name) {
-        this.Name = Name;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public Double getSalary() {
@@ -49,47 +49,47 @@ public class Staff {
     }
 
     public Integer getNumSegSoc() {
-        return NumSegSoc;
+        return numSegSoc;
     }
 
-    public void setNumSegSoc(Integer NumSegSoc) {
-        this.NumSegSoc = NumSegSoc;
+    public void setNumSegSoc(Integer numSegSoc) {
+        this.numSegSoc = numSegSoc;
     }
 
     public String getAddress() {
-        return Address;
+        return address;
     }
 
-    public void setAddress(String Address) {
-        this.Address = Address;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     public Integer getPhone_fijo() {
-        return Phone_fijo;
+        return phone_fijo;
     }
 
-    public void setPhone_fijo(Integer Phone_fijo) {
-        this.Phone_fijo = Phone_fijo;
+    public void setPhone_fijo(Integer phone_fijo) {
+        this.phone_fijo = phone_fijo;
     }
 
     public Integer getPhone_mobile() {
-        return Phone_mobile;
+        return phone_mobile;
     }
 
-    public void setPhone_mobile(Integer Phone_mobile) {
-        this.Phone_mobile = Phone_mobile;
+    public void setPhone_mobile(Integer phone_mobile) {
+        this.phone_mobile = phone_mobile;
     }
 
     public String getNameP() {
-        return NameP;
+        return nameP;
     }
 
-    public void setNameP(String NameP) {
-        this.NameP = NameP;
+    public void setNameP(String nameP) {
+        this.nameP = nameP;
     }
 
     @Override
     public String toString() {
-        return "Staff{" + "DNI=" + DNI + ", Name=" + Name + ", salary=" + salary + ", NumSegSoc=" + NumSegSoc + ", Address=" + Address + ", Phone_fijo=" + Phone_fijo + ", Phone_mobile=" + Phone_mobile + ", NameP=" + NameP + '}';
+        return "Staff{" + "dni=" + dni + ", name=" + name + ", salary=" + salary + ", numSegSoc=" + numSegSoc + ", address=" + address + ", phone_fijo=" + phone_fijo + ", phone_mobile=" + phone_mobile + ", nameP=" + nameP + '}';
     }
 }

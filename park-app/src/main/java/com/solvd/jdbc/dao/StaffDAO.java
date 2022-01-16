@@ -42,7 +42,7 @@ public class StaffDAO extends AbstractJdbcDAO implements IStaffDAO {
         try {
             conn = PoolConnection.getConnection();
             ps = conn.prepareStatement(SQL_INSERT);
-            ps.setInt(1, staff.getDNI());
+            ps.setInt(1, staff.getDni());
             ps.setString(2, staff.getName());
             ps.setDouble(3, staff.getSalary());
             ps.setInt(4, staff.getNumSegSoc());
@@ -67,7 +67,7 @@ public class StaffDAO extends AbstractJdbcDAO implements IStaffDAO {
         try {
             conn = PoolConnection.getConnection();
             ps = conn.prepareStatement(SQL_UPDATE);
-            ps.setInt(1, staff.getDNI());
+            ps.setInt(1, staff.getDni());
             ps.setString(2, staff.getName());
             ps.setDouble(3, staff.getSalary());
             ps.setInt(4, staff.getNumSegSoc());
@@ -93,7 +93,7 @@ public class StaffDAO extends AbstractJdbcDAO implements IStaffDAO {
         try {
             conn = PoolConnection.getConnection();
             ps = conn.prepareStatement(SQL_DELETE);
-            ps.setInt(1, staff.getDNI());
+            ps.setInt(1, staff.getDni());
             ps.executeUpdate();
             System.out.println("The staff " + staff.toString() + " has been deleted");
         } finally {
@@ -114,7 +114,7 @@ public class StaffDAO extends AbstractJdbcDAO implements IStaffDAO {
             rs = st.executeQuery(SQL_GET_ALL);
             while (rs.next()) {
                 Staff staff = new Staff();
-                staff.setDNI(rs.getInt("dni"));
+                staff.setDni(rs.getInt("dni"));
                 staff.setName(rs.getString("name"));
                 staff.setSalary(rs.getDouble("salary"));
                 staff.setNumSegSoc(rs.getInt("numSegSoc"));
@@ -146,7 +146,7 @@ public class StaffDAO extends AbstractJdbcDAO implements IStaffDAO {
             ps.setInt(1, dni);
             rs = ps.executeQuery();
             while (rs.next()) {
-                staff.setDNI(rs.getInt("dni"));
+                staff.setDni(rs.getInt("dni"));
                 staff.setName(rs.getString("name"));
                 staff.setSalary(rs.getDouble("salary"));
                 staff.setNumSegSoc(rs.getInt("numSegSoc"));
@@ -177,7 +177,7 @@ public class StaffDAO extends AbstractJdbcDAO implements IStaffDAO {
             ps.setString(1, name);
             rs = ps.executeQuery();
             while (rs.next()) {
-                staff.setDNI(rs.getInt("dni"));
+                staff.setDni(rs.getInt("dni"));
                 staff.setName(rs.getString("name"));
                 staff.setSalary(rs.getDouble("salary"));
                 staff.setNumSegSoc(rs.getInt("numSegSoc"));
@@ -210,7 +210,7 @@ public class StaffDAO extends AbstractJdbcDAO implements IStaffDAO {
             rs = ps.executeQuery();
             while (rs.next()) {
                 Staff staff = new Staff();
-                staff.setDNI(rs.getInt("dni"));
+                staff.setDni(rs.getInt("dni"));
                 staff.setName(rs.getString("name"));
                 staff.setSalary(rs.getDouble("salary"));
                 staff.setNumSegSoc(rs.getInt("numSegSoc"));
