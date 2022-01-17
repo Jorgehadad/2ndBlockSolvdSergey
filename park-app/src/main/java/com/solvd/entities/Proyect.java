@@ -2,7 +2,10 @@ package com.solvd.entities;
 
 import java.sql.Date;
 
-public class Proyect {
+import com.solvd.adapter.IAdapterBudget;
+import com.solvd.adapter.ISetAmount;
+
+public class Proyect implements IAdapterBudget {
     private String ProyectName;
     private Double budget; 
     private Date StartDate;
@@ -53,6 +56,17 @@ public class Proyect {
     @Override
     public String toString() {
         return "Proyect{" + "ProyectName=" + ProyectName + ", budget=" + budget + ", StartDate=" + StartDate + ", EndDate=" + EndDate + '}';
+    }
+
+    @Override
+    public void setAmount(double amount) {
+        this.budget = amount;
+        
+    }
+
+    @Override
+    public double getAmount() {
+        return this.budget;
     }
 
     

@@ -1,6 +1,8 @@
 package com.solvd.entities;
 
-public class Staff {
+import com.solvd.adapter.ISetAmount;
+
+public class Staff implements ISetAmount {
     private Integer dni;
     private String name;
     private Double salary;
@@ -91,5 +93,16 @@ public class Staff {
     @Override
     public String toString() {
         return "Staff{" + "dni=" + dni + ", name=" + name + ", salary=" + salary + ", numSegSoc=" + numSegSoc + ", address=" + address + ", phone_fijo=" + phone_fijo + ", phone_mobile=" + phone_mobile + ", nameP=" + nameP + '}';
+    }
+
+    @Override
+    public void setAmount(double amount) {
+        this.salary = amount;
+        
+    }
+
+    @Override
+    public double getAmount() {
+        return this.salary;
     }
 }
