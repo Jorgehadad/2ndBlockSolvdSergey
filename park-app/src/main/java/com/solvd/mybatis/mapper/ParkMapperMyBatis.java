@@ -5,10 +5,7 @@ import java.util.List;
 
 import com.solvd.entities.Park;
 
-import org.apache.ibatis.annotations.Delete;
-import org.apache.ibatis.annotations.Results;
-import org.apache.ibatis.annotations.Select;
-import org.apache.ibatis.annotations.Update;
+import org.apache.ibatis.annotations.*;
 
 public interface ParkMapperMyBatis {
     
@@ -20,7 +17,7 @@ public interface ParkMapperMyBatis {
         @org.apache.ibatis.annotations.Result(property = "areas", column = "nameP", javaType = List.class, many = @org.apache.ibatis.annotations.Many(select = "com.solvd.mybatis.mapper.AreaMapperMyBatis.getAllAreasByNameP"))})
     public Park getParkByName(String nameP);
 
-    @Update("UPDATE park SET dateDeclaration = #{dateDeclaracion} WHERE nameP = #{nameP}")
+    @Update("UPDATE park SET dateDeclaration = #{dateDeclaration} WHERE nameP = #{nameP}")
     public void updatePark(Park park);
 
     @Delete("DELETE FROM park WHERE nameP = #{nameP}")
@@ -35,14 +32,17 @@ public interface ParkMapperMyBatis {
     public List<Park> getAllParks();
     
     //date
-    @Select("SELECT * FROM park WHERE dateDeclaration = #{dateDeclaracion}")
+    @Select("SELECT * FROM park WHERE dateDeclaration = #{dateDeclaration}")
     @Results(value = {
         @org.apache.ibatis.annotations.Result(property = "nameP", column = "nameP"),
         @org.apache.ibatis.annotations.Result(property = "dateDeclaracion", column = "dateDeclaration"),
         //Many to one area list
         @org.apache.ibatis.annotations.Result(property = "areas", column = "nameP", javaType = List.class, many = @org.apache.ibatis.annotations.Many(select = "com.solvd.mybatis.mapper.AreaMapperMyBatis.getAllAreasByNameP"))})
-    public Park getParkByDate(Date dateDeclaracion);
+    public Park getParkByDate(Date dateDeclaration);
 
+    //insert
+    @Insert("INSERT INTO park (nameP, dateDeclaration ) VALUES (#{nameP}, #{dateDeclaration});")
+    public void insertPark(Park park);
                     
 
 
