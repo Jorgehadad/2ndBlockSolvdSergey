@@ -1,4 +1,4 @@
-package com.solvd.objectsIgnore;
+package com.solvd.objectsignore;
 
 public class EatToFeedAA {
     private String scientific_name_come;

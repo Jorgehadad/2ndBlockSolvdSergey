@@ -1,4 +1,4 @@
-package com.solvd.objectsIgnore;
+package com.solvd.objectsignore;
 
 import java.sql.Date;
 import java.sql.Time;

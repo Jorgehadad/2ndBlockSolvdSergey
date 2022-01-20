@@ -1,4 +1,4 @@
-package com.solvd.objectsIgnore;
+package com.solvd.objectsignore;
 
 public class MakesProyInvEsp {
     private String ProyectName;

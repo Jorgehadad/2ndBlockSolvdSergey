@@ -1,4 +1,4 @@
-package com.solvd.objectsIgnore;
+package com.solvd.objectsignore;
 
 public class HasCommunityParks {
     private String Name_CA;

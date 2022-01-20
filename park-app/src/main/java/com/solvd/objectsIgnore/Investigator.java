@@ -1,5 +1,5 @@
 
-package com.solvd.objectsIgnore;
+package com.solvd.objectsignore;
 
 public class Investigator {
     private Integer DNI;

@@ -14,7 +14,7 @@ import com.solvd.entities.Park;
 
 
 
-public class jsonParserJackson {
+public class JsonParserJackson {
     //Json Parser With Jackson
     //https://www.baeldung.com/jackson-json-parser
     //https://www.baeldung.com/jackson-json-parser-tutorial
@@ -28,16 +28,16 @@ public class jsonParserJackson {
         park.setNameP("Park1");
         park.setDateDeclaracion(new java.sql.Date(utilDate.getTime()));
         park.setAreas(null);
-        mapper.writeValue(new File("src/main/java/com/solvd/json/parks2.json"), park);
+        mapper.writeValue(new File("park-app/src/main/resources/JSON/test/parks2.json"), park);
 
-        Park newpark = mapper.readValue(new File("src/main/java/com/solvd/json/parks2.json"), Park.class);
+        Park newpark = mapper.readValue(new File("park-app/src/main/resources/JSON/test/parks2.json"), Park.class);
         System.out.println(newpark.getNameP());
         System.out.println(newpark.getDateDeclaracion());
         System.out.println(newpark);
 
         //MAP JSON WITH JACKSON 
         //String jsonParkArray = "[{\"nameP\":\"Park1\",\"dateDeclaracion\":\"2019-01-01\"},{\"nameP\":\"Park2\",\"dateDeclaracion\":\"2019-01-02\"}]";
-        List<Park> listPark = mapper.readValue(new File("src/main/java/com/solvd/json/parks.json"), new TypeReference<List<Park>>(){});
+        List<Park> listPark = mapper.readValue(new File("park-app/src/main/resources/JSON/test/parks.json"), new TypeReference<List<Park>>(){});
         System.out.println(listPark);
 
         String jsonParkArray2 = JsonMapper.builder().build().writeValueAsString(listPark);
@@ -51,7 +51,7 @@ public class jsonParserJackson {
         System.out.println(nameP);
         System.out.println(dateDeclaracion);
 
-        List<Park> listPark3 = mapper.readValue(new File("src/main/java/com/solvd/json/parks.json"), new TypeReference<List<Park>>(){});
+        List<Park> listPark3 = mapper.readValue(new File("park-app/src/main/resources/JSON/test/parks.json"), new TypeReference<List<Park>>(){});
         System.out.println(listPark3.size());
         System.out.println(listPark3.get(0).getNameP());
         System.out.println(listPark3.get(0).getDateDeclaracion());
