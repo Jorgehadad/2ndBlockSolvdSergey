@@ -2,16 +2,16 @@ package com.solvd.objectsignore;
 
 import java.sql.Date;
 
-public class Records {
+public class Record {
     private Integer NumTicket;
     private String NameP; 
     private Integer DNI;
     private Date Register_date;
 
-    public Records() {
+    public Record() {
     }
 
-    public Records(Integer NumTicket, String NameP, Integer DNI, Date Register_date) {
+    public Record(Integer NumTicket, String NameP, Integer DNI, Date Register_date) {
         this.NumTicket = NumTicket;
         this.NameP = NameP;
         this.DNI = DNI;

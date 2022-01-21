@@ -2,16 +2,16 @@ package com.solvd.objectsignore;
 
 import java.sql.Date;
 
-public class Vegetables {
+public class Vegetable {
     private String scientific_name;
     private Integer Flowering;
     private Date start_date;
     private Date end_date;
 
-    public Vegetables() {
+    public Vegetable() {
     }
 
-    public Vegetables(String scientific_name, Integer flowering, Date start_date, Date end_date) {
+    public Vegetable(String scientific_name, Integer flowering, Date start_date, Date end_date) {
         this.scientific_name = scientific_name;
         Flowering = flowering;
         this.start_date = start_date;

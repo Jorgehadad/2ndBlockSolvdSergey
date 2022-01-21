@@ -1,14 +1,14 @@
 package com.solvd.objectsignore;
 
-public class Species_area {
+public class Specie_area {
     private Integer id;
     private String area;
     private String scientific_name;
 
-    public Species_area() {
+    public Specie_area() {
     }
 
-    public Species_area(Integer id, String area, String scientific_name) {
+    public Specie_area(Integer id, String area, String scientific_name) {
         this.id = id;
         this.area = area;
         this.scientific_name = scientific_name;

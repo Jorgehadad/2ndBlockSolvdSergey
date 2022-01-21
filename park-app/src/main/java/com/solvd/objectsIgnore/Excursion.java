@@ -3,16 +3,16 @@ package com.solvd.objectsignore;
 import java.sql.Date;
 import java.sql.Time;
 
-public class Excursions {
+public class Excursion {
     private Integer Cod_Excursion;
     private Date date;
     private Time Hour;
     private String Vehicle;
 
-    public Excursions() {
+    public Excursion() {
     }
 
-    public Excursions(Integer cod_Excursion, Date date, Time hour, String vehicle) {
+    public Excursion(Integer cod_Excursion, Date date, Time hour, String vehicle) {
         Cod_Excursion = cod_Excursion;
         this.date = date;
         Hour = hour;

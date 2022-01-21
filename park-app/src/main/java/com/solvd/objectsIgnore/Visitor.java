@@ -1,15 +1,15 @@
 package com.solvd.objectsignore;
 
-public class Visitors {
+public class Visitor {
     private Integer DNI;
     private String Name;
     private String Address;
     private String Profession;
 
-    public Visitors() {
+    public Visitor() {
     }
 
-    public Visitors(Integer DNI, String Name, String Address, String Profession) {
+    public Visitor(Integer DNI, String Name, String Address, String Profession) {
         this.DNI = DNI;
         this.Name = Name;
         this.Address = Address;

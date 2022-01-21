@@ -29,7 +29,7 @@ public interface VisitorMapperMyBatis {
         @org.apache.ibatis.annotations.Result(property = "Profession", column = "Profession"),
         //housed list
         @org.apache.ibatis.annotations.Result(property = "housedList", column = "dni", javaType = List.class, many = @Many(select = "com.solvd.mybatis.mapper.HousedMapperMyBatis.getAllHousedByDniVisitor"))})
-    Visitor getVisitorByDni(String dni);
+    Visitor getVisitorByDni(Integer dni);
     
     @Select("SELECT * FROM visitor WHERE name = #{name}")
     @Results(value = {
@@ -63,6 +63,18 @@ public interface VisitorMapperMyBatis {
         //housed list
         @org.apache.ibatis.annotations.Result(property = "housedList", column = "dni", javaType = List.class, many = @Many(select = "com.solvd.mybatis.mapper.HousedMapperMyBatis.getAllHousedByDniVisitor"))})
     Visitor getVisitorByProfession(String Profession);
+
+    //insert
+    @Insert("INSERT INTO visitor (dni, name, Address, Profession) VALUES (#{dni}, #{name}, #{Address}, #{Profession})")
+    void insertVisitor(Visitor visitor);
+
+    //update
+    @Update("UPDATE visitor SET dni = #{dni}, name = #{name}, Address = #{Address}, Profession = #{Profession} WHERE dni = #{dni}")
+    void updateVisitor(Visitor visitor);
+
+    //delete
+    @Delete("DELETE FROM visitor WHERE dni = #{dni}")
+    void deleteVisitor(Integer dni);
 
 
 }

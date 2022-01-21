@@ -46,7 +46,7 @@ public interface HousedMapperMyBatis {
         @org.apache.ibatis.annotations.Result(property = "departureDate", column = "departureDate"),
         @org.apache.ibatis.annotations.Result(property = "room", column = "room")
     })
-    Housed getHousedByArrivalDateAndDepartureDate(String arrivalDate, String departureDate);
+    List<Housed> getHousedByArrivalDateAndDepartureDate(String arrivalDate, String departureDate);
 
     @Select("SELECT * FROM housed WHERE arrivalDate = #{arrivalDate}")
     @Results(value = {
@@ -76,7 +76,7 @@ public interface HousedMapperMyBatis {
         @org.apache.ibatis.annotations.Result(property = "departureDate", column = "departureDate"),
         @org.apache.ibatis.annotations.Result(property = "room", column = "room")
     })
-    List<Housed> getAllHousedByRoom(int room);
+    List<Housed> getAllHousedByRoom(String room);
 
     @Select("SELECT * FROM housed")
     @Results(value = {

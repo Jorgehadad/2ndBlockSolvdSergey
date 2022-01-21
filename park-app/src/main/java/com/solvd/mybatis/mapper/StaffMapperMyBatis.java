@@ -82,6 +82,20 @@ public interface StaffMapperMyBatis {
         @org.apache.ibatis.annotations.Result(property = "nameP", column = "nameP")
     })
     Staff getBySalary(Double salary);
+
+    //insert
+    @Insert("INSERT INTO staff (dni, name, salary, numSegSoc, address, phone_fijo, phone_mobile, nameP) VALUES (#{dni}, #{name}, #{salary}, #{numSegSoc}, #{address}, #{phone_fijo}, #{phone_mobile}, #{nameP})")
+    void insert(Staff staff);
+
+    //update
+    @Update("UPDATE staff SET dni = #{dni}, name = #{name}, salary = #{salary}, numSegSoc = #{numSegSoc}, address = #{address}, phone_fijo = #{phone_fijo}, phone_mobile = #{phone_mobile}, nameP = #{nameP} WHERE dni = #{dni}")
+    void update(Staff staff);
+
+    //delete
+    @Delete("DELETE FROM staff WHERE dni = #{dni}")
+    void delete(Integer dni);
+
+    
         
 
 

@@ -1,13 +1,13 @@
 package com.solvd.objectsignore;
 
-public class HasCommunityParks {
+public class HasCommunityPark {
     private String Name_CA;
     private String NameP;
 
-    public HasCommunityParks() {
+    public HasCommunityPark() {
     }
 
-    public HasCommunityParks(String Name_CA, String NameP) {
+    public HasCommunityPark(String Name_CA, String NameP) {
         this.Name_CA = Name_CA;
         this.NameP = NameP;
     }

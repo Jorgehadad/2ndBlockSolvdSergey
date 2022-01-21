@@ -1,13 +1,13 @@
 package com.solvd.objectsignore;
 
-public class Minerals {
+public class Mineral {
     private String scientific_name;
     private String type;
 
-    public Minerals() {
+    public Mineral() {
     }
 
-    public Minerals(String scientific_name, String type) {
+    public Mineral(String scientific_name, String type) {
         this.scientific_name = scientific_name;
         this.type = type;
     }

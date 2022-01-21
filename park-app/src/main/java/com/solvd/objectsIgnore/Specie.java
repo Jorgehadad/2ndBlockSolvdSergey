@@ -1,4 +1,4 @@
-package com.solvd.entities;
+package com.solvd.objectsignore;
 
 public class Specie {
     private String scientific_name;
