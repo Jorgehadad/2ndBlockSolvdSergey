@@ -72,13 +72,20 @@ public class AreaServiceXML implements IAreasDAO {
 
     @Override
     public void update(Area entity) throws SQLException {
-        // TODO Auto-generated method stub
-        
+        areas = unmarshall();
+        for (int i = 0; i < areas.size(); i++) {
+            if (areas.get(i).getnameA() == entity.getnameA()) {
+                areas.set(i, entity);
+            }
+        }
+        marshall(this);
     }
 
     @Override
     public void delete(Area entity) throws SQLException {
-                
+        areas = unmarshall();
+        areas.remove(entity);
+        marshall(this);
     }
 
 }

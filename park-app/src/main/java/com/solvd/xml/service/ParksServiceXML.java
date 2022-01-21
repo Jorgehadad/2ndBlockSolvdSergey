@@ -20,23 +20,73 @@ import jakarta.xml.bind.annotation.XmlRootElement;
 @XmlRootElement(name = "park")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class ParksServiceXML implements IParksDAO {
+    public static File FILE = new File("src/main/resources/XML/parks.xml");
 
-    @Override
-    public void save(Park entity) throws SQLException {
-                
+    @XmlElement(name = "park")
+    private List<Park> parks = null;
+
+    public ParksServiceXML(List<Park> parks) {
+        this.parks = parks;
+    }
+
+    public ParksServiceXML() {
     }
 
     @Override
-    public void update(Park entity) throws SQLException {
-        // TODO Auto-generated method stub
-        
+    public void save(Park entity) {
+        parks = unmarshall();
+        parks.add(entity);
+        marshall(this);
+    }
+
+    //marshall
+    private void marshall(ParksServiceXML parksDAO) {
+        try {
+            JAXBContext jaxbContext = JAXBContext.newInstance(ParksServiceXML.class);
+            Marshaller marshaller = jaxbContext.createMarshaller();
+            marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+            marshaller.marshal(parksDAO, FILE);
+        } catch (JAXBException e) {
+            e.printStackTrace();
+        }
+    }
+
+    //unmarshall
+    private List<Park> unmarshall() {
+        try {
+            JAXBContext jaxbContext = JAXBContext.newInstance(ParksServiceXML.class);
+            Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
+            ParksServiceXML parksDAO = (ParksServiceXML) unmarshaller.unmarshal(FILE);
+            return parksDAO.getParks();
+        } catch (JAXBException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    //getParks
+    public List<Park> getParks() {
+        return parks;
     }
 
     @Override
     public void delete(Park entity) throws SQLException {
-        // TODO Auto-generated method stub
-        
+        parks = unmarshall();
+        parks.remove(entity);
+        marshall(this);
     }
+
+    @Override
+    public void update(Park entity) throws SQLException {
+        parks = unmarshall();
+        for (int i = 0; i < parks.size(); i++) {
+            if (parks.get(i).getNameP() == entity.getNameP()) {
+                parks.set(i, entity);
+            }
+        }
+        marshall(this);
+    }
+    
 
 
 }

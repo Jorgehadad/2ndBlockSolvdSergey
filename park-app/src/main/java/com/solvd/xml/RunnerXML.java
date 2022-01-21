@@ -5,7 +5,7 @@ import java.sql.SQLException;
 import com.solvd.entities.Area;
 import com.solvd.xml.service.AreaServiceXML;
 
-public class Main {
+public class RunnerXML {
     public static void main(String[] args) throws SQLException {
 
 
