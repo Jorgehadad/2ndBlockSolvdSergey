@@ -5,6 +5,8 @@ import java.io.IOException;
 import java.sql.Date;
 import java.util.Calendar;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonNode;
@@ -22,6 +24,9 @@ public class JsonParserJackson {
 
 
     public static void main(String[] args) throws IOException {
+        final Logger LOG = Logger.getLogger(Park.class.getName());
+
+
         java.util.Date utilDate = new java.util.Date();
         ObjectMapper mapper = new ObjectMapper();
         Park park = new Park();
@@ -43,6 +48,7 @@ public class JsonParserJackson {
         String jsonParkArray2 = JsonMapper.builder().build().writeValueAsString(listPark);
         List<Park> listPark2 = mapper.readValue(jsonParkArray2, new TypeReference<List<Park>>(){});
         System.out.println(listPark2);
+        LOG.info("\n JSON: " + jsonParkArray2 + "\n");
 
         String json = "{\"nameP\":\"Park1\",\"dateDeclaracion\":\"2019-01-01\"}";
         JsonNode jsonNode = mapper.readTree(json);
