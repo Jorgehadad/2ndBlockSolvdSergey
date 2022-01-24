@@ -47,6 +47,4 @@ public class Conservation {
                 ", NameP='" + NameP + '\'' +
                 '}';
     }
-
-    
 }
