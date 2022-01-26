@@ -11,6 +11,7 @@ import com.solvd.jdbc.connections.PoolConnection;
 import com.solvd.jdbc.dao.HousedDAO;
 import com.solvd.jdbc.dao.ParkDAO;
 import com.solvd.jdbc.dao.VisitorDAO;
+import com.solvd.jdbc.service.AreaServiceJDBC;
 import com.solvd.jdbc.service.ParkServiceJDBC;
 
 public class RunnerJDBC {
@@ -26,6 +27,12 @@ public class RunnerJDBC {
         catch(SQLException ex){
             System.out.println(conn + "Connection failed");
         }
+
+        ParkServiceJDBC parkService = new ParkServiceJDBC();
+        parkService.getAll();
+
+        AreaServiceJDBC areaService = new AreaServiceJDBC();
+        //areaService.getAllByNameP("With Summer");
 
 //------------------------------------------------------------------------//
         /*

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<areas>
+    <area>
+        <nameA>Area 16</nameA>
+        <nameP>With Summer</nameP>
+        <extension>100.0</extension>
+    </area>
+    <area>
+        <nameA>Area 17</nameA>
+        <nameP>With Winter</nameP>
+        <extension>100.0</extension>
+    </area>
+    <area>
+        <nameA>Area 18</nameA>
+        <nameP>With Summer2</nameP>
+        <extension>200.0</extension>
+    </area>
+</areas>

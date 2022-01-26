@@ -109,12 +109,12 @@ public class ParkDAO extends AbstractJdbcDAO implements IParksDAO {
                 park.setNameP(rs.getString("nameP"));
                 park.setDateDeclaracion(rs.getDate("dateDeclaration"));
                 areas = new ArrayList<>();
-                ParkServiceJDBC parkService = new ParkServiceJDBC();
-                areas = parkService.getAllAreasByNameP(park.getNameP());
+                //ParkServiceJDBC parkService = new ParkServiceJDBC();
+                //areas = parkService.getAllAreasByNameP(park.getNameP());
                 park.setAreas(areas);
                 parks.add(park);
-                System.out.println("The park "+ park.toString() + " has been found" + " With this areas: \n" + park.getAreas());
-                System.out.println("-----------------------------------------------------");
+                //System.out.println("The park "+ park.toString() + " has been found" + " With this areas: \n" + park.getAreas());
+                //System.out.println("-----------------------------------------------------");
             }
         } finally{
             if(conn != null)

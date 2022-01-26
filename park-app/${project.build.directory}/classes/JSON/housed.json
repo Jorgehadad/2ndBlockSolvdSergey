@@ -1,0 +1,4 @@
+[{"numAccomodation":342, "dniVisitor":42000222, "arrivalDate":"2020-11-06", "departureDate":"2020-11-10", "room":"Room 10"},
+ {"numAccomodation":443, "dniVisitor":44000444, "arrivalDate":"2020-10-09", "departureDate":"2020-10-19", "room":"room 1"},
+ {"numAccomodation":765, "dniVisitor":41000111, "arrivalDate":"2021-01-22", "departureDate":"2021-02-01", "room":"room 4"},
+ {"numAccomodation":765, "dniVisitor":44000444, "arrivalDate":"2021-02-23", "departureDate":"2021-04-23", "room":"room 5"}]

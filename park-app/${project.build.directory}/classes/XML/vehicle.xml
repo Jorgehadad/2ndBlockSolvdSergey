@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<vehicles>
+    <vehicle id="1">
+        <model>Tesla</model>
+    </vehicle>
+
+    <vehicle>
+        
+    </vehicle>
+
+</vehicles>

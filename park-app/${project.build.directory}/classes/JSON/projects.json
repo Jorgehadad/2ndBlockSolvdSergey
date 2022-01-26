@@ -1,0 +1,12 @@
+[{"proyectName":"Proyect1", "budget":120000.0, "startDate":"2020-02-02", "endDate":"2017-02-03"},
+ {"proyectName":"Proyect10", "budget":120300.0, "startDate":"2020-05-05", "endDate":"2019-01-03"},
+ {"proyectName":"Proyect11", "budget":15203.0, "startDate":"2020-05-05", "endDate":"2019-01-03"},
+ {"proyectName":"Proyect12", "budget":52040.0, "startDate":"2020-05-05", "endDate":"2019-01-03"},
+ {"proyectName":"Proyect2", "budget":50000.0, "startDate":"2017-02-03", "endDate":"2017-02-03"},
+ {"proyectName":"Proyect3", "budget":112000.0, "startDate":"2018-02-03", "endDate":"2018-02-03"},
+ {"proyectName":"Proyect4", "budget":82000.0, "startDate":"2019-01-03", "endDate":"2019-01-03"},
+ {"proyectName":"Proyect5", "budget":36600.0, "startDate":"2018-01-03", "endDate":"2019-01-03"},
+ {"proyectName":"Proyect6", "budget":952000.0, "startDate":"2019-10-20", "endDate":"2019-01-03"},
+ {"proyectName":"Proyect7", "budget":148000.0, "startDate":"2020-10-03", "endDate":"2019-01-03"},
+ {"proyectName":"Proyect8", "budget":25400.0, "startDate":"2020-10-02", "endDate":"2019-01-03"},
+ {"proyectName":"Proyect9", "budget":634000.0, "startDate":"2019-10-02", "endDate":"2019-01-03"}]

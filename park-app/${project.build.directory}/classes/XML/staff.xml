@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<staffes>
+    <staff>
+        <DNI>32165498</DNI>
+        <Name>John</Name>
+        <Salary>1500</Salary>
+        <NumSegSoc>4780</NumSegSoc>
+        <Address>9 of July 784</Address>
+        <phone_fijo>48489481</phone_fijo>
+        <phone_mobile>48489481</phone_mobile>
+        <NameP>With Summer</NameP>
+    </staff>
+</staffes>

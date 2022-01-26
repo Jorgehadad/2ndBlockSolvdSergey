@@ -1,0 +1,5 @@
+[{"DNI":23596178, "Name":"Juan", "salary":28589.0, "NumSegSoc":4780, "address":"9 de Julio 552", "phone_fijo":44369989, "phone_mobile":36258974, "NameP":"Without Autumn"},
+ {"DNI":23596179, "Name":"Juancito2", "salary":28589.0, "NumSegSoc":4780, "address":"9 de Julio 552", "phone_fijo":44369989, "phone_mobile":36258974, "NameP":"Without Autumn"},
+ {"DNI":41456112, "Name":"Juan2", "salary":22589.0, "NumSegSoc":4772, "address":"Alvear 780", "phone_fijo":4435489, "phone_mobile":362515678, "NameP":"Day Light"},
+ {"DNI":41456123, "Name":"Juan3", "salary":22589.0, "NumSegSoc":4772, "address":"Alvear 783", "phone_fijo":4435489, "phone_mobile":36251567, "NameP":"Night Light"},
+ {"DNI":42569784, "Name":"Juan4", "salary":24589.0, "NumSegSoc":4785, "address":"Donovan 412", "phone_fijo":4437063, "phone_mobile":36258412, "NameP":"Spring Light"}]
