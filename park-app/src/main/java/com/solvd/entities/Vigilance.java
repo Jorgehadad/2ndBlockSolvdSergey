@@ -1,6 +1,17 @@
-package com.solvd.objectsignore;
+package com.solvd.entities;
 
-public class Vigilance {
+import com.solvd.factory.IStaff;
+
+import com.fasterxml.jackson.annotation.*;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlType;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.logging.Logger;
+
+public class Vigilance implements IStaff {
     private Integer DNI;
     private String NameP;
     private String NameA;
@@ -68,4 +79,32 @@ public class Vigilance {
                 ", type='" + type + '\'' +
                 '}';
     }   
+
+    @Override
+    public void earnMoney() {
+        System.out.println("Vigilance earns money");
+    }
+
+
+    @Override
+    public void work() {
+        System.out.println("Vigilance works");
+    }
+
+    @Override
+    public boolean isConservation() {
+        return false;
+    }
+
+    @Override
+    public boolean isInvestigator() {
+        return false;
+    }
+
+    @Override
+    public boolean isVigilance() {
+        return true;
+    }
+
+    
 }

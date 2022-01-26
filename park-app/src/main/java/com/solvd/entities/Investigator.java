@@ -1,7 +1,9 @@
 
-package com.solvd.objectsignore;
+package com.solvd.entities;
 
-public class Investigator {
+import com.solvd.factory.IStaff;
+
+public class Investigator implements IStaff {
     private Integer DNI;
     private String Title;
 
@@ -36,5 +38,31 @@ public class Investigator {
                 ", Title='" + Title + '\'' +
                 '}';
     }
+
+    @Override
+    public void earnMoney() {
+        System.out.println("Investigator earns money");
+    }
+
+    @Override
+    public void work() {
+        System.out.println("Investigator works");
+    }
+
+    @Override
+    public boolean isConservation() {
+        return false;
+    }
+
+    @Override
+    public boolean isInvestigator() {
+        return true;
+    }
+
+    @Override
+    public boolean isVigilance() {
+        return false;
+    }
+    
     
 }
