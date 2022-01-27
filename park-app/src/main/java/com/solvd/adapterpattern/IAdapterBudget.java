@@ -1,4 +1,4 @@
-package com.solvd.adapter;
+package com.solvd.adapterpattern;
 
 import com.solvd.entities.Proyect;
 

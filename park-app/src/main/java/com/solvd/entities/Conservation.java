@@ -1,8 +1,8 @@
 package com.solvd.entities;
 
-import com.solvd.factory.IStaff;
-
 import com.fasterxml.jackson.annotation.*;
+import com.solvd.factorypattern.IStaff;
+
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import jakarta.xml.bind.annotation.XmlType;

@@ -3,6 +3,9 @@ package com.solvd.entities;
 import java.sql.Date;
 
 import com.fasterxml.jackson.annotation.*;
+import com.solvd.adapterpattern.IAdapterBudget;
+import com.solvd.adapterpattern.ISetAmount;
+
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import jakarta.xml.bind.annotation.XmlType;
@@ -10,9 +13,6 @@ import jakarta.xml.bind.annotation.XmlType;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
-
-import com.solvd.adapter.IAdapterBudget;
-import com.solvd.adapter.ISetAmount;
 
 public class Proyect implements IAdapterBudget {
     private String ProyectName;

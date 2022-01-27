@@ -1,4 +1,4 @@
-package com.solvd.factory;
+package com.solvd.factorypattern;
 
 import java.util.logging.Logger;
 

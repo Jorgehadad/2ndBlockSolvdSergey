@@ -1,12 +1,11 @@
 package com.solvd.entities;
 
-import com.solvd.adapter.ISetAmount;
-
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSetter;
+import com.solvd.adapterpattern.ISetAmount;
 
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -143,4 +142,6 @@ public class Staff implements ISetAmount {
     public String toString() {
         return "Staff [dni=" + dni + ", name=" + name + ", salary=" + salary + ", numSegSoc=" + numSegSoc + ", address=" + address + ", phone_fijo=" + phone_fijo + ", phone_mobile=" + phone_mobile + ", nameP=" + nameP + "]";
     }
+
+    
 }

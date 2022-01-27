@@ -1,7 +1,7 @@
 
 package com.solvd.entities;
 
-import com.solvd.factory.IStaff;
+import com.solvd.factorypattern.IStaff;
 
 public class Investigator implements IStaff {
     private Integer DNI;

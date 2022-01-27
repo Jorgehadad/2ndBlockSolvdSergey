@@ -1,4 +1,4 @@
-package com.solvd.factory;
+package com.solvd.factorypattern;
 
 import com.solvd.entities.Conservation;
 import com.solvd.entities.Investigator;

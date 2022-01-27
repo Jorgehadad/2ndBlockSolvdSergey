@@ -1,4 +1,4 @@
-package com.solvd.adapter;
+package com.solvd.adapterpattern;
 
 import java.util.Date;
 
