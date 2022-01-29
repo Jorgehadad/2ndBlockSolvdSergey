@@ -6,7 +6,7 @@ import com.solvd.entities.Housed;
 
 import org.apache.ibatis.annotations.*;
 
-public interface HousedMapperMyBatis {
+public interface IHousedMapperMyBatis {
 
     @Select("SELECT * FROM housed WHERE numAccomodation = #{numAccomodation} and dniVisitor = #{dniVisitor}")
     @Results(value = {

@@ -7,7 +7,7 @@ import com.solvd.entities.Park;
 
 import org.apache.ibatis.annotations.*;
 
-public interface ParkMapperMyBatis {
+public interface IParkMapperMyBatis {
     
     @Select("SELECT * FROM park WHERE nameP = #{nameP}")
     @Results(value = {

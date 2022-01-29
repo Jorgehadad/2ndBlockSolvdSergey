@@ -6,7 +6,7 @@ import com.solvd.entities.Area;
 
 import org.apache.ibatis.annotations.*;
 
-public interface AreaMapperMyBatis {
+public interface IAreaMapperMyBatis {
     
     @Select("SELECT * FROM area WHERE nameA = #{nameA}")
     @Results(value = {

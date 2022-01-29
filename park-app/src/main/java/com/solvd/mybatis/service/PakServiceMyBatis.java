@@ -5,10 +5,10 @@ import java.sql.SQLException;
 import java.util.List;
 
 import com.solvd.entities.Park;
-import com.solvd.mybatis.mapper.ParkMapperMyBatis;
+import com.solvd.mybatis.mapper.IParkMapperMyBatis;
 
 public class PakServiceMyBatis {
-    private static ParkMapperMyBatis parkMapper;
+    private static IParkMapperMyBatis parkMapper;
     
     public void insertPark(Park park) throws SQLException {
         parkMapper.insertPark(park);

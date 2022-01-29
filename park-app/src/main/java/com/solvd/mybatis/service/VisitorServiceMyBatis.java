@@ -4,10 +4,10 @@ import java.sql.SQLException;
 import java.util.List;
 
 import com.solvd.entities.Visitor;
-import com.solvd.mybatis.mapper.VisitorMapperMyBatis;
+import com.solvd.mybatis.mapper.IVisitorMapperMyBatis;
 
 public class VisitorServiceMyBatis {
-    private static VisitorMapperMyBatis visitorMapper;
+    private static IVisitorMapperMyBatis visitorMapper;
 
     //getAll
     public List<Visitor> getAllVisitors() throws SQLException {

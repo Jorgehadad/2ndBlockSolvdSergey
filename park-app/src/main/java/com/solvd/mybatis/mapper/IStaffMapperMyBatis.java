@@ -6,7 +6,7 @@ import com.solvd.entities.Staff;
 
 import org.apache.ibatis.annotations.*;
 
-public interface StaffMapperMyBatis {
+public interface IStaffMapperMyBatis {
 
     /*
     private Integer dni;

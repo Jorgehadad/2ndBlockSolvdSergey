@@ -3,8 +3,12 @@ package com.solvd.entities;
 import java.sql.Date;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonGetter;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonRootName;
 import com.fasterxml.jackson.annotation.JsonSetter;
 
 import jakarta.xml.bind.annotation.XmlAccessorType;
@@ -16,6 +20,8 @@ import jakarta.xml.bind.annotation.XmlAccessType;
 @XmlRootElement(name = "area")
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(propOrder = {"nameP", "dateDeclaration"})
+@JsonRootName("area")
+@JsonPropertyOrder({"nameP", "dateDeclaration"})
 public class Park {
     
     @JsonProperty("nameP")
@@ -30,24 +36,29 @@ public class Park {
     public Park() {
     }
 
-    public Park(String nameP, Date dateDeclaration) {
+    @JsonCreator
+    public Park(@JsonProperty("nameP") String nameP, @JsonProperty("dateDeclaration") Date dateDeclaration) {
         this.nameP = nameP;
         this.dateDeclaration = dateDeclaration;
     }
- 
+
+    @JsonGetter("nameP")
     public String getNameP() {
         return nameP;
     }
 
+    @XmlElement(name = "nameP")
     @JsonSetter("nameP")
     public void setNameP(String nameP) {
         this.nameP = nameP;
     }
 
+    @JsonGetter("dateDeclaration")
     public Date getDateDeclaracion() {
         return dateDeclaration;
     }
 
+    @XmlElement(name = "dateDeclaration")
     @JsonSetter("dateDeclaration")
     public void setDateDeclaracion(Date dateDeclaracion) {
         this.dateDeclaration = dateDeclaracion;

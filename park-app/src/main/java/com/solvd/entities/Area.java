@@ -1,7 +1,11 @@
 package com.solvd.entities;
 
 
+import com.fasterxml.jackson.annotation.JsonGetter;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonRootName;
+import com.fasterxml.jackson.annotation.JsonSetter;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
@@ -12,6 +16,8 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlRootElement(name = "areas")
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(propOrder = {"nameA","nameP","extension"})
+@JsonRootName("area")
+@JsonPropertyOrder({"nameA","nameP","extension"})
 public class Area  {
 
     @JsonProperty("nameA")
@@ -23,26 +29,35 @@ public class Area  {
     @JsonProperty("extension")
     private Double extension;
 
+    @JsonGetter("nameA")
     public String getnameA() {
         return nameA;
     }
 
+    @XmlElement(name = "nameA")
+    @JsonSetter("nameA")
     public void setnameA(String nameA) {
         this.nameA = nameA;
     }
 
+    @JsonGetter("nameP")
     public String getnameP() {
         return nameP;
     }
 
+    @XmlElement(name = "nameP")
+    @JsonSetter("nameP")
     public void setnameP(String nameP) {
         this.nameP = nameP;
     }
 
+    @JsonGetter("extension")
     public Double getExtension() {
         return extension;
     }
 
+    @XmlElement(name = "extension")
+    @JsonSetter("extension")
     public void setExtension(Double extension) {
         this.extension = extension;
     }

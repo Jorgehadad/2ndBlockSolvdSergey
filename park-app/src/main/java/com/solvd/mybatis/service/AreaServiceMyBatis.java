@@ -4,10 +4,10 @@ import java.sql.SQLException;
 import java.util.List;
 
 import com.solvd.entities.Area;
-import com.solvd.mybatis.mapper.AreaMapperMyBatis;
+import com.solvd.mybatis.mapper.IAreaMapperMyBatis;
 
 public class AreaServiceMyBatis {
-    private static AreaMapperMyBatis areaMapper;
+    private static IAreaMapperMyBatis areaMapper;
 
     public void insertArea(Area area) throws SQLException {
         areaMapper.insertArea(area);

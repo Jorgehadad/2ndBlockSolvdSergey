@@ -6,11 +6,11 @@ import com.solvd.entities.Park;
 import com.solvd.entities.Staff;
 import com.solvd.entities.Visitor;
 import com.solvd.mybatis.connection.ConnectionBuilder;
-import com.solvd.mybatis.mapper.AreaMapperMyBatis;
-import com.solvd.mybatis.mapper.HousedMapperMyBatis;
-import com.solvd.mybatis.mapper.ParkMapperMyBatis;
-import com.solvd.mybatis.mapper.StaffMapperMyBatis;
-import com.solvd.mybatis.mapper.VisitorMapperMyBatis;
+import com.solvd.mybatis.mapper.IAreaMapperMyBatis;
+import com.solvd.mybatis.mapper.IHousedMapperMyBatis;
+import com.solvd.mybatis.mapper.IParkMapperMyBatis;
+import com.solvd.mybatis.mapper.IStaffMapperMyBatis;
+import com.solvd.mybatis.mapper.IVisitorMapperMyBatis;
 
 import org.apache.ibatis.datasource.pooled.PooledDataSource;
 import org.apache.ibatis.io.Resources;
@@ -26,7 +26,7 @@ public class RunnerMyBatis {
 
     public static void main(String[] args) {
         try (SqlSession session = new ConnectionBuilder().buildConnection()) {
-            System.out.println(session.getMapper(ParkMapperMyBatis.class).getParkByName("With Summer"));
+            System.out.println(session.getMapper(IParkMapperMyBatis.class).getParkByName("With Summer"));
 
             //update
             Park park = new Park();
@@ -51,7 +51,7 @@ public class RunnerMyBatis {
         // --------------------------------------------------
         
         try (SqlSession session = new ConnectionBuilder().buildConnection()) {
-            System.out.println(session.getMapper(AreaMapperMyBatis.class).getAreaByName("Area 21"));
+            System.out.println(session.getMapper(IAreaMapperMyBatis.class).getAreaByName("Area 21"));
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -60,7 +60,7 @@ public class RunnerMyBatis {
         // --------------------------------------------------
 
         try (SqlSession session = new ConnectionBuilder().buildConnection()) {
-            System.out.println(session.getMapper(HousedMapperMyBatis.class).getAllHoused());
+            System.out.println(session.getMapper(IHousedMapperMyBatis.class).getAllHoused());
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -70,7 +70,7 @@ public class RunnerMyBatis {
 
 
         try (SqlSession session = new ConnectionBuilder().buildConnection()) {
-            for (Staff staff : session.getMapper(StaffMapperMyBatis.class).getAll()) {
+            for (Staff staff : session.getMapper(IStaffMapperMyBatis.class).getAll()) {
                 System.out.println(staff + "\n");
             }
             //System.out.println(session.getMapper(StaffMapperMyBatis.class).getAll().iterator().next());
@@ -82,7 +82,7 @@ public class RunnerMyBatis {
         // --------------------------------------------------
 
         try (SqlSession session = new ConnectionBuilder().buildConnection()) {
-            for (Visitor visitor : session.getMapper(VisitorMapperMyBatis.class).getAll()) {
+            for (Visitor visitor : session.getMapper(IVisitorMapperMyBatis.class).getAll()) {
                 System.out.println(visitor + "\n");
             }
 

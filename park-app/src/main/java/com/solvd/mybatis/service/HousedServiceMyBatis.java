@@ -5,10 +5,10 @@ import java.sql.SQLException;
 import java.util.List;
 
 import com.solvd.entities.Housed;
-import com.solvd.mybatis.mapper.HousedMapperMyBatis;
+import com.solvd.mybatis.mapper.IHousedMapperMyBatis;
 
 public class HousedServiceMyBatis {
-    private static HousedMapperMyBatis housedMapper;
+    private static IHousedMapperMyBatis housedMapper;
 
     public void insertHoused(Housed housed) throws SQLException {
         housedMapper.insertHoused(housed);

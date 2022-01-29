@@ -4,19 +4,15 @@ import java.sql.Date;
 
 import java.util.List;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonSetter;
+import com.fasterxml.jackson.annotation.*;
 
-import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlElement;
-import jakarta.xml.bind.annotation.XmlRootElement;
-import jakarta.xml.bind.annotation.XmlType;
-import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.*;
 
 @XmlRootElement(name = "housed")
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(propOrder = {"numAccomodation, dniVisitor, arrivalDate, departureDate, room "})
+@JsonRootName("housed")
+@JsonPropertyOrder({"numAccomodation", "dniVisitor", "arrivalDate", "departureDate", "room"})
 public class Housed {
     @JsonProperty("numAccomodation")
     private Integer numAccomodation;
@@ -36,54 +32,65 @@ public class Housed {
     public Housed() {
     }
 
-    public Housed(Integer numAccomodation, Integer dniVisitor, Date arrival_date, Date departure_date, String room) {
+    @JsonCreator
+    public Housed(@JsonProperty("numAccomodation") Integer numAccomodation, @JsonProperty("dniVisitor") Integer dniVisitor, @JsonProperty("arrivalDate") Date arrivalDate, @JsonProperty("departureDate") Date departureDate, @JsonProperty("room") String room) {
         this.numAccomodation = numAccomodation;
         this.dniVisitor = dniVisitor;
-        arrivalDate = arrival_date;
-        departureDate = departure_date;
+        this.arrivalDate = arrivalDate;
+        this.departureDate = departureDate;
         this.room = room;
     }
 
+    @JsonGetter("numAccomodation")
     public Integer getNumAccomodation() {
         return numAccomodation;
     }
 
+    @XmlElement(name = "numAccomodation")
     @JsonSetter("numAccomodation")
     public void setNumAccomodation(Integer numAccomodation) {
         this.numAccomodation = numAccomodation;
     }
 
+    @JsonGetter("dniVisitor")
     public Integer getDniVisitor() {
         return dniVisitor;
     }
 
+    @XmlElement(name = "dniVisitor")
     @JsonSetter("dniVisitor")
     public void setDniVisitor(Integer dniVisitor) {
         this.dniVisitor = dniVisitor;
     }
 
+    @JsonGetter("arrivalDate")
     public Date getarrivalDate() {
         return arrivalDate;
     }
 
+    @XmlElement(name = "arrivalDate")
     @JsonSetter("arrivalDate")
     public void setarrivalDate(Date arrival_date) {
         arrivalDate = arrival_date;
     }
 
+    @JsonGetter("departureDate")
     public Date getdepartureDate() {
         return departureDate;
     }
 
+    @XmlElement(name = "departureDate")
     @JsonSetter("departureDate")
     public void setdepartureDate(Date departure_date) {
         departureDate = departure_date;
     }
 
+    @JsonGetter("room")
     public String getRoom() {
         return room;
     }
 
+    @XmlElement(name = "room")
     @JsonSetter("room")
     public void setRoom(String room) {
         this.room = room;

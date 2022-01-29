@@ -7,7 +7,7 @@ import com.solvd.entities.Visitor;
 
 import org.apache.ibatis.annotations.*;
 
-public interface VisitorMapperMyBatis {
+public interface IVisitorMapperMyBatis {
 
     //getAll
     @Select("SELECT * FROM visitor")

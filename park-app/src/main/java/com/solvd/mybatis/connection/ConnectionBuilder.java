@@ -20,11 +20,11 @@ public class ConnectionBuilder {
         Environment environment = new Environment("development", new JdbcTransactionFactory(), dataSource);
 
         Configuration configuration = new Configuration(environment);
-        configuration.addMapper(ParkMapperMyBatis.class);
-        configuration.addMapper(AreaMapperMyBatis.class);
-        configuration.addMapper(VisitorMapperMyBatis.class);
-        configuration.addMapper(StaffMapperMyBatis.class);
-        configuration.addMapper(HousedMapperMyBatis.class);
+        configuration.addMapper(IParkMapperMyBatis.class);
+        configuration.addMapper(IAreaMapperMyBatis.class);
+        configuration.addMapper(IVisitorMapperMyBatis.class);
+        configuration.addMapper(IStaffMapperMyBatis.class);
+        configuration.addMapper(IHousedMapperMyBatis.class);
         //always add mappers to configuration
 
         SqlSessionFactoryBuilder builder = new SqlSessionFactoryBuilder();
