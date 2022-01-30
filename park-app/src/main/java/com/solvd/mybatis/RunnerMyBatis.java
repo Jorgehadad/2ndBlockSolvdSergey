@@ -41,16 +41,16 @@ public class RunnerMyBatis {
             park.setDateDeclaracion(Date.valueOf("2022-01-01"));
             //session.getMapper(ParkMapperMyBatis.class).insertPark(park);
 
-            session.commit();
-            session.close();
+            //session.commit();
+            //session.close();
 
         } catch (Exception e) {
             e.printStackTrace();
         }
-
+        
         // --------------------------------------------------
         
-        try (SqlSession session = new ConnectionBuilder().buildConnection()) {
+        /*try (SqlSession session = new ConnectionBuilder().buildConnection()) {
             System.out.println(session.getMapper(IAreaMapperMyBatis.class).getAreaByName("Area 21"));
 
         } catch (Exception e) {
@@ -89,7 +89,7 @@ public class RunnerMyBatis {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        
+        */
     }
     
 }
