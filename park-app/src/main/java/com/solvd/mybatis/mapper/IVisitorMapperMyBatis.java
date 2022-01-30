@@ -17,7 +17,7 @@ public interface IVisitorMapperMyBatis {
         @org.apache.ibatis.annotations.Result(property = "Address", column = "Address"),
         @org.apache.ibatis.annotations.Result(property = "Profession", column = "Profession"),
         //housed list
-        @org.apache.ibatis.annotations.Result(property = "housedList", column = "dni", javaType = List.class, many = @Many(select = "com.solvd.mybatis.mapper.HousedMapperMyBatis.getAllHousedByDniVisitor"))})
+        @org.apache.ibatis.annotations.Result(property = "housedList", column = "dni", javaType = List.class, many = @Many(select = "com.solvd.mybatis.mapper.IHousedMapperMyBatis.getAllHousedByDniVisitor"))})
     List<Visitor> getAll();
     
     @Select("SELECT * FROM visitor WHERE dni = #{dni}")
@@ -28,7 +28,7 @@ public interface IVisitorMapperMyBatis {
         @org.apache.ibatis.annotations.Result(property = "Address", column = "Address"),
         @org.apache.ibatis.annotations.Result(property = "Profession", column = "Profession"),
         //housed list
-        @org.apache.ibatis.annotations.Result(property = "housedList", column = "dni", javaType = List.class, many = @Many(select = "com.solvd.mybatis.mapper.HousedMapperMyBatis.getAllHousedByDniVisitor"))})
+        @org.apache.ibatis.annotations.Result(property = "housedList", column = "dni", javaType = List.class, many = @Many(select = "com.solvd.mybatis.mapper.IHousedMapperMyBatis.getAllHousedByDniVisitor"))})
     Visitor getVisitorByDni(Integer dni);
     
     @Select("SELECT * FROM visitor WHERE name = #{name}")
@@ -39,7 +39,7 @@ public interface IVisitorMapperMyBatis {
         @org.apache.ibatis.annotations.Result(property = "Address", column = "Address"),
         @org.apache.ibatis.annotations.Result(property = "Profession", column = "Profession"),
         //housed list
-        @org.apache.ibatis.annotations.Result(property = "housedList", column = "dni", javaType = List.class, many = @Many(select = "com.solvd.mybatis.mapper.HousedMapperMyBatis.getAllHousedByDniVisitor"))})
+        @org.apache.ibatis.annotations.Result(property = "housedList", column = "dni", javaType = List.class, many = @Many(select = "com.solvd.mybatis.mapper.IHousedMapperMyBatis.getAllHousedByDniVisitor"))})
     Visitor getVisitorByName(String name);
 
     @Select("SELECT * FROM visitor WHERE Address = #{Address}")
@@ -50,7 +50,7 @@ public interface IVisitorMapperMyBatis {
         @org.apache.ibatis.annotations.Result(property = "Address", column = "Address"),
         @org.apache.ibatis.annotations.Result(property = "Profession", column = "Profession"),
         //housed list
-        @org.apache.ibatis.annotations.Result(property = "housedList", column = "dni", javaType = List.class, many = @Many(select = "com.solvd.mybatis.mapper.HousedMapperMyBatis.getAllHousedByDniVisitor"))})
+        @org.apache.ibatis.annotations.Result(property = "housedList", column = "dni", javaType = List.class, many = @Many(select = "com.solvd.mybatis.mapper.IHousedMapperMyBatis.getAllHousedByDniVisitor"))})
     Visitor getVisitorByAddress(String Address);
 
     @Select("SELECT * FROM visitor WHERE Profession = #{Profession}")
@@ -61,7 +61,7 @@ public interface IVisitorMapperMyBatis {
         @org.apache.ibatis.annotations.Result(property = "Address", column = "Address"),
         @org.apache.ibatis.annotations.Result(property = "Profession", column = "Profession"),
         //housed list
-        @org.apache.ibatis.annotations.Result(property = "housedList", column = "dni", javaType = List.class, many = @Many(select = "com.solvd.mybatis.mapper.HousedMapperMyBatis.getAllHousedByDniVisitor"))})
+        @org.apache.ibatis.annotations.Result(property = "housedList", column = "dni", javaType = List.class, many = @Many(select = "com.solvd.mybatis.mapper.IHousedMapperMyBatis.getAllHousedByDniVisitor"))})
     Visitor getVisitorByProfession(String Profession);
 
     //insert

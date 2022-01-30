@@ -14,7 +14,7 @@ public interface IParkMapperMyBatis {
         @org.apache.ibatis.annotations.Result(property = "nameP", column = "nameP"),
         @org.apache.ibatis.annotations.Result(property = "dateDeclaracion", column = "dateDeclaration"),
         //Many to one area list
-        @org.apache.ibatis.annotations.Result(property = "areas", column = "nameP", javaType = List.class, many = @org.apache.ibatis.annotations.Many(select = "com.solvd.mybatis.mapper.AreaMapperMyBatis.getAllAreasByNameP"))})
+        @org.apache.ibatis.annotations.Result(property = "areas", column = "nameP", javaType = List.class, many = @Many(select = "com.solvd.mybatis.mapper.IAreaMapperMyBatis.getAllAreasByNameP"))})
     public Park getParkByName(String nameP);
 
     @Update("UPDATE park SET dateDeclaration = #{dateDeclaration} WHERE nameP = #{nameP}")
@@ -28,7 +28,7 @@ public interface IParkMapperMyBatis {
         @org.apache.ibatis.annotations.Result(property = "nameP", column = "nameP"),
         @org.apache.ibatis.annotations.Result(property = "dateDeclaracion", column = "dateDeclaration"),
         //Many to one area list
-        @org.apache.ibatis.annotations.Result(property = "areas", column = "nameP", javaType = List.class, many = @org.apache.ibatis.annotations.Many(select = "com.solvd.mybatis.mapper.AreaMapperMyBatis.getAllAreasByNameP"))})
+        @org.apache.ibatis.annotations.Result(property = "areas", column = "nameP", javaType = List.class, many = @org.apache.ibatis.annotations.Many(select = "com.solvd.mybatis.mapper.IAreaMapperMyBatis.getAllAreasByNameP"))})
     public List<Park> getAllParks();
     
     //date
@@ -37,7 +37,7 @@ public interface IParkMapperMyBatis {
         @org.apache.ibatis.annotations.Result(property = "nameP", column = "nameP"),
         @org.apache.ibatis.annotations.Result(property = "dateDeclaracion", column = "dateDeclaration"),
         //Many to one area list
-        @org.apache.ibatis.annotations.Result(property = "areas", column = "nameP", javaType = List.class, many = @org.apache.ibatis.annotations.Many(select = "com.solvd.mybatis.mapper.AreaMapperMyBatis.getAllAreasByNameP"))})
+        @org.apache.ibatis.annotations.Result(property = "areas", column = "nameP", javaType = List.class, many = @org.apache.ibatis.annotations.Many(select = "com.solvd.mybatis.mapper.IAreaMapperMyBatis.getAllAreasByNameP"))})
     public Park getParkByDate(Date dateDeclaration);
 
     //insert
