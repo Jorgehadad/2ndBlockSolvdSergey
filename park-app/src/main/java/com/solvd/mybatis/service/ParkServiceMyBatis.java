@@ -5,37 +5,61 @@ import java.sql.SQLException;
 import java.util.List;
 
 import com.solvd.entities.Park;
+import com.solvd.mybatis.connection.ConnectionBuilder;
 import com.solvd.mybatis.mapper.IParkMapperMyBatis;
+
+import org.apache.ibatis.session.SqlSession;
 
 public class ParkServiceMyBatis {
     private static IParkMapperMyBatis parkMapper;
     
     public void insertPark(Park park) throws SQLException {
-        parkMapper.insertPark(park);
+        try( SqlSession session = new ConnectionBuilder().buildConnection() ){
+            parkMapper = session.getMapper(IParkMapperMyBatis.class);
+            parkMapper.insertPark(park);
+            session.commit();
+        }
     }
 
     //getParkByName
     public Park getParkByName(String nameP) throws SQLException {
-        return parkMapper.getParkByName(nameP);
+        try( SqlSession session = new ConnectionBuilder().buildConnection() ){
+            parkMapper = session.getMapper(IParkMapperMyBatis.class);
+            return parkMapper.getParkByName(nameP);
+        }
     }
 
     //updatePark
     public void updatePark(Park park) throws SQLException {
-        parkMapper.updatePark(park);
+        try( SqlSession session = new ConnectionBuilder().buildConnection() ){
+            parkMapper = session.getMapper(IParkMapperMyBatis.class);
+            parkMapper.updatePark(park);
+            session.commit();
+        }
     }
 
     //deletePark
     public void deletePark(String nameP) throws SQLException {
-        parkMapper.deletePark(nameP);
+        try( SqlSession session = new ConnectionBuilder().buildConnection() ){
+            parkMapper = session.getMapper(IParkMapperMyBatis.class);
+            parkMapper.deletePark(nameP);
+            session.commit();
+        }
     }
 
     //getAllParks
     public List<Park> getAllParks() throws SQLException {
-        return parkMapper.getAllParks();
+        try( SqlSession session = new ConnectionBuilder().buildConnection() ){
+            parkMapper = session.getMapper(IParkMapperMyBatis.class);
+            return parkMapper.getAllParks();
+        }
     }
 
     //getParkByDate
     public Park getParkByDate(Date date) throws SQLException {
-        return parkMapper.getParkByDate(date);
+        try( SqlSession session = new ConnectionBuilder().buildConnection() ){
+            parkMapper = session.getMapper(IParkMapperMyBatis.class);
+            return parkMapper.getParkByDate(date);
+        }
     }
 }

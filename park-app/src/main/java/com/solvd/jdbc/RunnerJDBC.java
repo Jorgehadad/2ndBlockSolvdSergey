@@ -8,11 +8,8 @@ import com.solvd.entities.Housed;
 import com.solvd.entities.Park;
 import com.solvd.entities.Visitor;
 import com.solvd.jdbc.connections.PoolConnection;
-import com.solvd.jdbc.dao.HousedDAO;
-import com.solvd.jdbc.dao.ParkDAO;
-import com.solvd.jdbc.dao.VisitorDAO;
-import com.solvd.jdbc.service.AreaServiceJDBC;
-import com.solvd.jdbc.service.ParkServiceJDBC;
+import com.solvd.jdbc.dao.*;
+import com.solvd.jdbc.service.*;
 
 public class RunnerJDBC {
 
@@ -32,7 +29,16 @@ public class RunnerJDBC {
         parkService.getAll();
 
         AreaServiceJDBC areaService = new AreaServiceJDBC();
-        //areaService.getAllByNameP("With Summer");
+        areaService.getAllByNameP("With Summer");
+        
+        VisitorServiceJDBC visitorsService = new VisitorServiceJDBC();
+        visitorsService.getAll();
+
+        HousedServiceJDBC housedService = new HousedServiceJDBC();
+        housedService.getAllLimit10();
+        
+
+
 
 //------------------------------------------------------------------------//
         /*

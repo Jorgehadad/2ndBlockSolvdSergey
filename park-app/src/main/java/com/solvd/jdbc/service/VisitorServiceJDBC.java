@@ -4,10 +4,12 @@ import java.sql.SQLException;
 import java.util.List;
 
 import com.solvd.entities.Visitor;
+import com.solvd.jdbc.dao.HousedDAO;
 import com.solvd.jdbc.dao.VisitorDAO;
 
 public class VisitorServiceJDBC {
     private static VisitorDAO visitorDAO;
+    private static HousedDAO housedDAO = new HousedDAO();
 
     public VisitorServiceJDBC() {
         visitorDAO = new VisitorDAO();
@@ -27,7 +29,16 @@ public class VisitorServiceJDBC {
 
     //getAll()
     public List<Visitor> getAll() throws SQLException {
-        return visitorDAO.getAll();
+        List<Visitor> visitorL = visitorDAO.getAll();
+        visitorL.forEach(visitor -> {
+            try {
+                visitor.setHousedList(housedDAO.getByDni(visitor.getDNI()));
+                System.out.println(visitor);
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        });
+        return visitorL;
     }
 
     //getByName

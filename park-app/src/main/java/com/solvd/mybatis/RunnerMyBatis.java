@@ -50,7 +50,7 @@ public class RunnerMyBatis {
         
         // --------------------------------------------------
         
-        /*try (SqlSession session = new ConnectionBuilder().buildConnection()) {
+        try (SqlSession session = new ConnectionBuilder().buildConnection()) {
             System.out.println(session.getMapper(IAreaMapperMyBatis.class).getAreaByName("Area 21"));
 
         } catch (Exception e) {
@@ -89,7 +89,7 @@ public class RunnerMyBatis {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        */
+        
     }
     
 }

@@ -28,7 +28,7 @@ public class VisitorDAO extends AbstractJdbcDAO implements IVisitorDAO {
     private static final String SQL_INSERT = "INSERT INTO visitor (`dni`,`name`,`Address`,`Profession`) VALUES (?, ?, ?, ?)";
     private static final String SQL_UPDATE_ADDRESS = "UPDATE visitor SET Address=? WHERE dni = ?";
     private static final String SQL_DELETE = "DELETE FROM visitor WHERE dni = ?";
-    private static final String SQL_GET_ALL = "SELECT * FROM visitor LIMIT 10";
+    private static final String SQL_GET_ALL = "SELECT * FROM visitor";
     private static final String SQL_GET_BY_NAME = "SELECT * FROM visitor WHERE name = ?";
     private static final String SQL_GET_BY_PROFESSION = "SELECT * FROM visitor WHERE dateDeclaration = ?";
     private static final String SQL_GET_BY_NAME_AND_PROFESSION = "SELECT * FROM visitor WHERE name = ? AND Profession = ?";
@@ -117,13 +117,13 @@ public class VisitorDAO extends AbstractJdbcDAO implements IVisitorDAO {
                 visitor.setName(rs.getString("name"));
                 visitor.setAddress(rs.getString("Address"));
                 visitor.setProfession(rs.getString("Profession"));
-                housedListI = new ArrayList<>();
-                HousedDAO housedDAO = new HousedDAO();
-                housedListI = housedDAO.getByDni(visitor.getDNI());
-                visitor.setHousedList(housedListI);
+                //housedListI = new ArrayList<>();
+                //HousedDAO housedDAO = new HousedDAO();
+                //housedListI = housedDAO.getByDni(visitor.getDNI());
+                //visitor.setHousedList(housedListI);
                 visitors.add(visitor);
-                System.out.println("The visitor "+ visitor.toString() + " has been found" + " With this housed: \n" + visitor.getHousedList());
-                System.out.println("-----------------------------------------------------");
+                //System.out.println("The visitor "+ visitor.toString() + " has been found" + " With this housed: \n" + visitor.getHousedList());
+                //System.out.println("-----------------------------------------------------");
             }
         } finally{
             if(conn != null)
