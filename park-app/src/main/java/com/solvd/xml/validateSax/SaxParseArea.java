@@ -23,11 +23,11 @@ public class SaxParseArea {
     public static void main(String[] args) {
 
 	Logger LOG = Logger.getLogger(SaxParsePark.class.getName());
-	File xsdFile = new File("src/main/resources/XSD/areas.xsd");
+	File xsdFile = new File("park-app/src/main/resources/XSD/areas.xsd");
 
 	try {
 
-	    Path xmlPath = Paths.get("src/main/resources/XML/areas.xml");
+	    Path xmlPath = Paths.get("park-app/src/main/resources/XML/areas.xml");
 	    Reader reader = Files.newBufferedReader(xmlPath);
 
 	    String schemaLang = XMLConstants.W3C_XML_SCHEMA_NS_URI;
