@@ -15,7 +15,7 @@ import jakarta.xml.bind.annotation.XmlAccessType;
 
 @XmlRootElement(name = "staff")
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(propOrder = {"dni", "name", "salary","numSegSoc", "address", "phone_fijo", "phome_mobile", "nameP"})
+@XmlType(propOrder = {"dni", "name", "salary","numSegSoc", "address", "phone_fijo", "phone_mobile", "nameP"})
 public class Staff implements ISetAmount {
     @JsonProperty("dni")
     private Integer dni;

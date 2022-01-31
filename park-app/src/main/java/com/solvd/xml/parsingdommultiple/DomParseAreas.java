@@ -1,4 +1,4 @@
-package com.solvd.xml.parsingDOM;
+package com.solvd.xml.parsingdommultiple;
 
 import java.io.File;
 
@@ -10,10 +10,10 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-public class DomParseArea {
+public class DomParseAreas {
     public static void main(String[] args) {
 	try {
-	    File inputFile = new File("src/main/resources/XML/areas.xml");
+	    File inputFile = new File("park-app/src/main/resources/XML/areas.xml");
 	    DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 	    DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
 	    Document doc = dBuilder.parse(inputFile);

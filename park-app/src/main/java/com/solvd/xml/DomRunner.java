@@ -15,7 +15,7 @@ public class DomRunner {
 
     public static void main (String[] args) throws ParserConfigurationException, SAXException, IOException {
         DocumentBuilder documentBuilder = DocumentBuilderFactory.newDefaultInstance().newDocumentBuilder();
-        Document dom = documentBuilder.parse("src/main/resources/XML/areas.xml");
+        Document dom = documentBuilder.parse("park-app/src/main/resources/XML/areas.xml");
         dom.getDocumentElement().normalize();
 
         for (int i = 0; i < dom.getElementsByTagName("nameA").getLength(); i++) {

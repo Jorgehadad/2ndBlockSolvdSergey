@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <visitors>
     <visitor>
-        <DNI>32165498</DNI>
-        <Name>John</Name>
+        <dni>32165498</dni>
+        <name>John</name>
         <Address>9 of July 784</Address>
-        <profession>Developer</profession>
+        <Profession>Developer</Profession>
     </visitor>
     <visitor>
-        <DNI>32165499</DNI>
-        <Name>Johnson</Name>
+        <dni>32165499</dni>
+        <name>Johnson</name>
         <Address>9 of March</Address>
-        <profession>Full-Stack Developer</profession>
+        <Profession>Full-Stack Developer</Profession>
     </visitor>
 </visitors>

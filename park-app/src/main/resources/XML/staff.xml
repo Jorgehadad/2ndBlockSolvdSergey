@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<staffes>
+<staff>
     <staff>
-        <DNI>32165498</DNI>
-        <Name>John</Name>
-        <Salary>1500</Salary>
-        <NumSegSoc>4780</NumSegSoc>
-        <Address>9 of July 784</Address>
+        <dni>32165498</dni>
+        <name>John</name>
+        <salary>1500</salary>
+        <numSegSoc>4780</numSegSoc>
+        <address>9 of July 784</address>
         <phone_fijo>48489481</phone_fijo>
         <phone_mobile>48489481</phone_mobile>
-        <NameP>With Summer</NameP>
+        <nameP>With Summer</nameP>
     </staff>
-</staffes>
+</staff>

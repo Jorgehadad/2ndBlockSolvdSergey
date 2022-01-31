@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<housedRoot>
+  <housed>
+    <numAccomodation>342</numAccomodation>
+    <dniVisitor>42000222</dniVisitor>
+    <arrivalDate>2020-11-06</arrivalDate>
+    <departureDate>2020-11-10</departureDate>
+    <room>Room 10</room>
+  </housed>
+  <housed>
+    <numAccomodation>443</numAccomodation>
+    <dniVisitor>44000444</dniVisitor>
+    <arrivalDate>2020-10-09</arrivalDate>
+    <departureDate>2020-10-19</departureDate>
+    <room>room 1</room>
+  </housed>
+  <housed>
+    <numAccomodation>765</numAccomodation>
+    <dniVisitor>10008774</dniVisitor>
+    <arrivalDate>2021-02-23</arrivalDate>
+    <departureDate>2021-02-23</departureDate>
+    <room>room 5</room>
+  </housed>
+  <housed>
+    <numAccomodation>765</numAccomodation>
+    <dniVisitor>10010908</dniVisitor>
+    <arrivalDate>2021-02-23</arrivalDate>
+    <departureDate>2021-02-23</departureDate>
+    <room>room 5</room>
+  </housed>
+  <housed>
+    <numAccomodation>765</numAccomodation>
+    <dniVisitor>10057482</dniVisitor>
+    <arrivalDate>2021-02-23</arrivalDate>
+    <departureDate>2021-02-23</departureDate>
+    <room>room 5</room>
+  </housed>
+  <housed>
+    <numAccomodation>765</numAccomodation>
+    <dniVisitor>10076706</dniVisitor>
+    <arrivalDate>2021-02-23</arrivalDate>
+    <departureDate>2021-02-23</departureDate>
+    <room>room 5</room>
+  </housed>
+  <housed>
+    <numAccomodation>765</numAccomodation>
+    <dniVisitor>10103010</dniVisitor>
+    <arrivalDate>2021-02-23</arrivalDate>
+    <departureDate>2021-02-23</departureDate>
+    <room>room 5</room>
+  </housed>
+  <housed>
+    <numAccomodation>765</numAccomodation>
+    <dniVisitor>41000111</dniVisitor>
+    <arrivalDate>2021-01-22</arrivalDate>
+    <departureDate>2021-02-01</departureDate>
+    <room>room 4</room>
+  </housed>
+  <housed>
+    <numAccomodation>765</numAccomodation>
+    <dniVisitor>44000444</dniVisitor>
+    <arrivalDate>2021-02-23</arrivalDate>
+    <departureDate>2021-04-23</departureDate>
+    <room>room 5</room>
+  </housed>
+</housedRoot>
